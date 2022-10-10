@@ -1,18 +1,3 @@
-<!--
-=========================================================
-* Soft UI Dashboard - v1.0.3
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../public/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../public/assets/img/favicon.png">
   <title>
-    Soft UI Dashboard by Creative Tim
+    simpeg
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -42,7 +27,7 @@
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html" target="_blank">
         <img src="../public/assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold">Soft UI Dashboard</span>
+        <span class="ms-1 font-weight-bold">simpeg</span>
       </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -225,14 +210,13 @@
           <div class="icon icon-shape icon-sm bg-white shadow text-center mb-3 d-flex align-items-center justify-content-center border-radius-md">
             <i class="ni ni-diamond text-dark text-gradient text-lg top-0" aria-hidden="true" id="sidenavCardIcon"></i>
           </div>
-          <div class="docs-info">
+          <!-- <div class="docs-info">
             <h6 class="text-white up mb-0">Need help?</h6>
             <p class="text-xs font-weight-bold">Please check our docs</p>
             <a href="https://www.creative-tim.com/learning-lab/bootstrap/license/soft-ui-dashboard" target="_blank" class="btn btn-white btn-sm w-100 mb-0">Documentation</a>
-          </div>
+          </div> -->
         </div>
       </div>
-      <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/soft-ui-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
     </div>
   </aside>
   <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
