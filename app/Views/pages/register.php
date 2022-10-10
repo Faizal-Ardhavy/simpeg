@@ -63,7 +63,7 @@
                                     <input type="password" class="form-control" id="password_conf" name="password_conf" placeholder=" Confirm Password" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
+                                    <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
                                 </div>
                                 <p class="text-sm mt-3 mb-0">Already have an account? <a href="javascript:;" class="text-dark font-weight-bolder">Sign in</a></p>
                             </form>

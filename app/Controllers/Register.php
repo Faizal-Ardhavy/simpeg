@@ -14,7 +14,7 @@ class Register extends BaseController
     {
         if (!$this->validate([
             'username' => [
-                'rules' => 'required|min_length[4]|max_length[20]|is_unique[users.username]',
+                'rules' => 'required|min_length[4]|max_length[20]|is_unique[pegawai.username]',
                 'errors' => [
                     'required' => '{field} Harus diisi',
                     'min_length' => '{field} Minimal 4 Karakter',
@@ -48,12 +48,12 @@ class Register extends BaseController
             session()->setFlashdata('error', $this->validator->listErrors());
             return redirect()->back()->withInput();
         }
-        $users = new PegawaiModel();
-        $users->insert([
+        $pegawai = new PegawaiModel();
+        $pegawai->insert([
             'username' => $this->request->getVar('username'),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
             'name' => $this->request->getVar('name')
         ]);
-        return redirect()->to('/login');
+        return redirect()->to('/');
     }
 }
