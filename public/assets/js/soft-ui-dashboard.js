@@ -243,10 +243,15 @@ function navbarFixed(el) {
     navbarBlurOnScroll('navbarBlur');
     el.setAttribute("checked", "true");
   } else {
-    navbar.classList.remove(...classes);
-    navbar.setAttribute('navbar-scroll', 'false');
+    // navbar.classList.remove(...classes);
+    // navbar.setAttribute('navbar-scroll', 'false');
+    // navbarBlurOnScroll('navbarBlur');
+    // el.removeAttribute("checked");
+
+    navbar.classList.add(...classes);
+    navbar.setAttribute('navbar-scroll', 'true');
     navbarBlurOnScroll('navbarBlur');
-    el.removeAttribute("checked");
+    el.setAttribute("checked", "true");
   }
 };
 
