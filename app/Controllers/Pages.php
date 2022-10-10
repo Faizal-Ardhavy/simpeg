@@ -17,4 +17,9 @@ class Pages extends BaseController
     {
         return view('pages/signin');
     }
+
+    public function signup()
+    {
+        return view('pages/signup');
+    }
 }
