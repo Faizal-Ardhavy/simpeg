@@ -8,15 +8,13 @@ class Pages extends BaseController
     {
         return view('welcome_message');
     }
-    public function view($page = 'dashboard')
+    public function dashboard()
     {
-        if($page != 'dashboard') {
-            $page = 'dashboard';
-        }
-        if (!is_file(APPPATH . 'Views/pages/' . $page . '.php')) {
-            // Whoops, we don't have a page for that!
-            throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
-        }
-        return view('pages/' . $page);
+        return view('pages/dashboard');
+    }
+
+    public function login()
+    {
+        return view('pages/signin');
     }
 }
