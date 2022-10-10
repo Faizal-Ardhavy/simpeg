@@ -82,14 +82,20 @@
                   <p class="mb-0">Enter username and password</p>
                 </div>
                 <div class="card-body">
-                  <form role="form">
+                  <?php if (!empty(session()->getFlashdata('error'))) : ?>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <?php echo session()->getFlashdata('error'); ?>
+                    </div>
+                  <?php endif; ?>
+                  <form role="form" method="post" action="<?= base_url(); ?>/login/process">
+                    <?= csrf_field(); ?>
                     <label>Username</label>
                     <div class="mb-3">
-                      <input type="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="username-addon">
+                      <input type="username" class="form-control" id="username" name="username" placeholder="Username" aria-label="Username" aria-describedby="username-addon" required autofocus>
                     </div>
                     <label>Password</label>
                     <div class="mb-3">
-                      <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Password" aria-label="Password" aria-describedby="password-addon" required>
                     </div>
                     <!-- <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" id="rememberMe" checked="">
