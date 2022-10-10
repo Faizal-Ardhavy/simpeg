@@ -37,7 +37,7 @@
           <a class="nav-link  active" href="../pages/dashboard.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>shop </title>
+                <title>Dashboard </title>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g transform="translate(-1716.000000, -439.000000)" fill="#FFFFFF" fill-rule="nonzero">
                     <g transform="translate(1716.000000, 291.000000)">
@@ -54,10 +54,10 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/tables.html">
+          <a class="nav-link  " href="../pages/information.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>office</title>
+                <title>Information</title>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
                     <g transform="translate(1716.000000, 291.000000)">
@@ -74,10 +74,10 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/billing.html">
+          <a class="nav-link  " href="../pages/payroll.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>credit-card</title>
+                <title>Payroll</title>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
                     <g transform="translate(1716.000000, 291.000000)">
@@ -94,10 +94,10 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/virtual-reality.html">
+          <a class="nav-link  " href="../pages/reports.html">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>box-3d-50</title>
+                <title>Reports</title>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
                     <g transform="translate(1716.000000, 291.000000)">
@@ -222,13 +222,39 @@
               <input type="text" class="form-control" placeholder="Type here...">
             </div>
           </div>
-          <ul class="navbar-nav  justify-content-end">
-            <li class="nav-item d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item dropdown pe-2 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body font-weight-bold px-0" data-bs-toggle="dropdown">
                 <i class="fa fa-user me-sm-1"></i>
                 <span class="d-sm-inline d-none"></span>
               </a>
-            </li>
+              <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="d-flex flex-column justify-content-center">
+                        <i class="fa fa-right-from-bracket me-1"></i>
+                        <p class="text-xs text-secondary mb-0">
+                          Sign Out
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="d-flex flex-column justify-content-center">
+                        <p class="text-xs text-secondary mb-0">
+                          <i class="fa fa-clock me-1"></i>
+                          1 day
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li> -->
+              </ul>
+            </li> 
             <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
                 <div class="sidenav-toggler-inner">
@@ -962,7 +988,7 @@
       </footer>
     </div>
   </main>
-  <div class="fixed-plugin">
+  <!-- <div class="fixed-plugin">
     <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
       <i class="fa fa-cog py-2"> </i>
     </a>
@@ -977,11 +1003,11 @@
             <i class="fa fa-close"></i>
           </button>
         </div>
-        <!-- End Toggle Button -->
+        
       </div>
       <hr class="horizontal dark my-1">
       <div class="card-body pt-sm-3 pt-0">
-        <!-- Sidebar Backgrounds -->
+        
         <div>
           <h6 class="mb-0">Sidebar Colors</h6>
         </div>
@@ -995,7 +1021,7 @@
             <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
           </div>
         </a>
-        <!-- Sidenav Type -->
+        
         <div class="mt-3">
           <h6 class="mb-0">Sidenav Type</h6>
           <p class="text-sm">Choose between 2 different sidenav types.</p>
@@ -1018,7 +1044,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
   <!--   Core JS Files   -->
   <script src="/assets/js/core/popper.min.js"></script>
   <script src="/assets/js/core/bootstrap.min.js"></script>
