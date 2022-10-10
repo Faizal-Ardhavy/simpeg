@@ -10,7 +10,9 @@ class Pages extends BaseController
     }
     public function dashboard()
     {
-        return view('pages/dashboard');
+        $session = session();
+        $name['name'] = $session->get('pegawai_name');
+        return view('pages/dashboard', $name);
     }
 
     public function login()

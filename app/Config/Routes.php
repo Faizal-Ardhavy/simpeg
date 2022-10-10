@@ -38,6 +38,8 @@ $routes->set404Override();
 $routes->get('/', 'Pages::index');
 $routes->get('dashboard', 'Pages::dashboard');
 $routes->get('login', 'Pages::login');
+$routes->get('/signup', 'Register::index');
+$routes->post('/signup/process', 'Register::process');
 
 /*
  * --------------------------------------------------------------------
