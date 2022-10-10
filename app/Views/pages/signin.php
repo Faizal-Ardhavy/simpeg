@@ -22,10 +22,9 @@
 </head>
 
 <body class="">
-  <div class="container position-sticky z-index-sticky top-0">
+  <!-- <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
       <div class="col-12">
-        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg blur blur-rounded top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
           <div class="container-fluid">
             <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="../pages/dashboard.html">
@@ -65,19 +64,13 @@
                   </a>
                 </li>
               </ul>
-              <ul class="navbar-nav d-lg-block d-none">
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/product/soft-ui-dashboard" class="btn btn-sm btn-round mb-0 me-1 bg-gradient-dark">Free download</a>
-                </li>
-              </ul>
             </div>
           </div>
         </nav>
-        <!-- End Navbar -->
       </div>
     </div>
-  </div>
-  <main class="main-content  mt-0">
+  </div> -->
+  <main class="main-content mt-0">
     <section>
       <div class="page-header min-vh-75">
         <div class="container">
@@ -85,23 +78,23 @@
             <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
               <div class="card card-plain mt-8">
                 <div class="card-header pb-0 text-left bg-transparent">
-                  <h3 class="font-weight-bolder text-info text-gradient">Welcome back</h3>
-                  <p class="mb-0">Enter your email and password to sign in</p>
+                  <h3 class="font-weight-bolder text-info">Welcome to <span class="text-info text-gradient">Employee Portal</span></h3>
+                  <p class="mb-0">Enter username and password</p>
                 </div>
                 <div class="card-body">
                   <form role="form">
-                    <label>Email</label>
+                    <label>Username</label>
                     <div class="mb-3">
-                      <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
+                      <input type="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="username-addon">
                     </div>
                     <label>Password</label>
                     <div class="mb-3">
                       <input type="email" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
                     </div>
-                    <div class="form-check form-switch">
+                    <!-- <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" id="rememberMe" checked="">
                       <label class="form-check-label" for="rememberMe">Remember me</label>
-                    </div>
+                    </div> -->
                     <div class="text-center">
                       <button type="button" class="btn bg-gradient-info w-100 mt-4 mb-0">Sign in</button>
                     </div>
@@ -125,8 +118,8 @@
       </div>
     </section>
   </main>
-  <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
-  <footer class="footer py-5">
+  <!-- -------- START FOOTER ------- -->
+  <!-- <footer class="footer py-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mb-4 mx-auto text-center">
@@ -177,8 +170,8 @@
         </div>
       </div>
     </div>
-  </footer>
-  <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+  </footer> -->
+  <!-- -------- END FOOTER ------- -->
   <!--   Core JS Files   -->
   <script src="/assets/js/core/popper.min.js"></script>
   <script src="/assets/js/core/bootstrap.min.js"></script>
