@@ -17,11 +17,11 @@ class Pages extends BaseController
 
     public function login()
     {
-        return view('pages/signin');
+        return view('pages/login');
     }
 
     public function signup()
     {
-        return view('pages/signup');
+        return view('pages/register');
     }
 }
