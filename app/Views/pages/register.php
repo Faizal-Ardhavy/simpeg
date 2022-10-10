@@ -41,15 +41,26 @@
                 <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
                     <div class="card z-index-0">
                         <div class="card-body">
-                            <form role="form text-left">
+                            <?php if (!empty(session()->getFlashdata('error'))) : ?>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <h4>Check your entries</h4>
+                                    </hr />
+                                    <?php echo session()->getFlashdata('error'); ?>
+                                </div>
+                            <?php endif; ?>
+                            <form role="form text-left" method="post" action="<?= base_url(); ?>/register/process">
+                                <?= csrf_field(); ?>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="email-addon">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" aria-label="Name" aria-describedby="name-addon">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="username-addon">
+                                    <input type="username" class="form-control" id="username" name="username" placeholder="Username" aria-label="Username" aria-describedby="username-addon">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" id="password_conf" name="password_conf" placeholder=" Confirm Password" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="text-center">
                                     <button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
