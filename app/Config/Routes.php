@@ -17,6 +17,9 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
+$routes->get('/', 'Home::index');
+$routes->get('pages', 'Pages::index');
+$routes->get('(:any)', 'Pages::view/$1');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
