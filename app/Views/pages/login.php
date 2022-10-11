@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/assets/img/favicon.png">
   <title>
-    Masuk
+    SIMPEG - Masuk
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -78,7 +78,7 @@
             <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
               <div class="card card-plain mt-8">
                 <div class="card-header pb-0 text-left bg-transparent">
-                  <h3 class="font-weight-bolder text-info">Selamat Datang <span class="text-info text-gradient">ke Portal Pegawai</span></h3>
+                  <h3 class="font-weight-bolder text-dark">Selamat Datang ke <span class="text-primary text-gradient">Portal Pegawai</span></h3>
                   <p class="mb-0">Masukkan username dan password</p>
                 </div>
                 <div class="card-body">
@@ -98,14 +98,14 @@
                       <input type="password" class="form-control" id="password" name="password" placeholder="Kata Sandi" aria-label="Password" aria-describedby="password-addon" required>
                     </div>
                     <div class="text-center">
-                      <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Masuk</button>
+                      <button type="submit" class="btn bg-gradient-primary w-100 mt-4 mb-0">Masuk</button>
                     </div>
                   </form>
                 </div>
                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
                   <p class="mb-4 text-sm mx-auto">
                     Belum punya akun?
-                    <a href="register" class="text-info text-gradient font-weight-bold">Daftar</a>
+                    <a href="register" class="text-primary text-gradient font-weight-bold">Daftar</a>
                   </p>
                 </div>
               </div>
