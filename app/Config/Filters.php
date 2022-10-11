@@ -23,6 +23,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'pegawaiAuth' => \App\Filters\PegawaiAuthFilter::class,
     ];
 
     /**
@@ -35,6 +36,14 @@ class Filters extends BaseConfig
         'before' => [
             // 'honeypot',
             // 'csrf',
+            'pegawaiAuth' => [
+                'except' => [
+                    'login',
+                    'login/process',
+                    'register',
+                    'register/process'
+                ]
+            ]
             // 'invalidchars',
         ],
         'after' => [
