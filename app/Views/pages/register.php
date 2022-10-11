@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
-                        <h1 class="text-white mb-2 mt-5">Sign Up</h1>
+                        <h1 class="text-white mb-2 mt-5">Daftar</h1>
                     </div>
                 </div>
             </div>
@@ -51,21 +51,21 @@
                             <form role="form text-left" method="post" action="<?= base_url(); ?>/register/process">
                                 <?= csrf_field(); ?>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" aria-label="Name" aria-describedby="name-addon">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Nama" aria-label="Name" aria-describedby="name-addon">
                                 </div>
                                 <div class="mb-3">
                                     <input type="username" class="form-control" id="username" name="username" placeholder="Username" aria-label="Username" aria-describedby="username-addon">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" aria-label="Kata Sandi" aria-describedby="password-addon">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="password" class="form-control" id="password_conf" name="password_conf" placeholder=" Confirm Password" aria-label="Password" aria-describedby="password-addon">
+                                    <input type="password" class="form-control" id="password_conf" name="password_conf" placeholder=" Konfirmasi Kata Sandi" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
+                                    <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Daftar</button>
                                 </div>
-                                <p class="text-sm mt-3 mb-0">Already have an account? <a href="login" class="text-dark font-weight-bolder">Sign in</a></p>
+                                <p class="text-sm mt-3 mb-0">Sudah memiliki akun? <a href="login" class="text-dark font-weight-bolder">Masuk</a></p>
                             </form>
                         </div>
                     </div>

@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/assets/img/favicon.png">
   <title>
-    Sign In
+    Masuk
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -78,8 +78,8 @@
             <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
               <div class="card card-plain mt-8">
                 <div class="card-header pb-0 text-left bg-transparent">
-                  <h3 class="font-weight-bolder text-info">Welcome to <span class="text-info text-gradient">Employee Portal</span></h3>
-                  <p class="mb-0">Enter username and password</p>
+                  <h3 class="font-weight-bolder text-info">Selamat Datang <span class="text-info text-gradient">ke Portal Pegawai</span></h3>
+                  <p class="mb-0">Masukkan username dan password</p>
                 </div>
                 <div class="card-body">
                   <?php if (!empty(session()->getFlashdata('error'))) : ?>
@@ -95,17 +95,17 @@
                     </div>
                     <label>Password</label>
                     <div class="mb-3">
-                      <input type="password" class="form-control" id="password" name="password" placeholder="Password" aria-label="Password" aria-describedby="password-addon" required>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Kata Sandi" aria-label="Password" aria-describedby="password-addon" required>
                     </div>
                     <div class="text-center">
-                      <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Sign in</button>
+                      <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Masuk</button>
                     </div>
                   </form>
                 </div>
                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
                   <p class="mb-4 text-sm mx-auto">
-                    Don't have an account?
-                    <a href="register" class="text-info text-gradient font-weight-bold">Sign up</a>
+                    Belum punya akun?
+                    <a href="register" class="text-info text-gradient font-weight-bold">Daftar</a>
                   </p>
                 </div>
               </div>
