@@ -42,6 +42,7 @@ $routes->post('login/process', 'Login::process');
 $routes->get('/register', 'Register::index');
 $routes->post('/register/process', 'Register::process');
 $routes->get('/logout', 'Login::logout');
+$routes->get('(:any)', 'Login::dashboard');
 
 /*
  * --------------------------------------------------------------------
