@@ -33,7 +33,7 @@
                 <div class="card-header pb-0">
                     <div class="row">
                         <div class="col-md-8 d-flex align-items-center">
-                            <h6 class="mb-0 mx-2">Profile Information</h6>
+                            <h6 class="mb-0 mx-2">Profil Pegawai</h6>
                         </div>
                         <div class="col-md-4 text-end">
                             <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> <?php //Tombol modal 
@@ -54,7 +54,7 @@
                             <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
                         </tr>
                         <tr>
-                            <td style="width: 20% !important;">Tempat, Tanggal Lahir</td>
+                            <td style="width: 20% !important;">Tanggal Lahir</td>
                             <td style="width: 5% !important;">:</td>
                             <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
                         </tr>
