@@ -32,35 +32,50 @@
         <div class="card-header pb-0">
           <div class="row">
             <div class="col-md-8 d-flex align-items-center">
-              <h6 class="mb-0">Profile Information</h6>
+              <h6 class="mb-0 mx-2">Profile Information</h6>
             </div>
             <div class="col-md-4 text-end">
-              <a href="javascript:;"> <?php //Tombol modal ?>
+              <a href="javascript:;"> <?php //Tombol modal 
+                                      ?>
                 <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
               </a>
             </div>
           </div>
         </div>
         <div class="card-body">
-          <hr class="horizontal gray-light my-2">
-          <ul class="list-group">
-            <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Full Name:</strong> &nbsp; Alec M. Thompson</li>
-            <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile:</strong> &nbsp; (44) 123 1234 123</li>
-            <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email:</strong> &nbsp; alecthompson@mail.com</li>
-            <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Location:</strong> &nbsp; USA</li>
-            <li class="list-group-item border-0 ps-0 pb-0">
-              <strong class="text-dark text-sm">Social:</strong> &nbsp;
-              <a class="btn btn-facebook btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
-                <i class="fab fa-facebook fa-lg"></i>
-              </a>
-              <a class="btn btn-twitter btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
-                <i class="fab fa-twitter fa-lg"></i>
-              </a>
-              <a class="btn btn-instagram btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
-                <i class="fab fa-instagram fa-lg"></i>
-              </a>
-            </li>
-          </ul>
+          <hr class="horizontal gray-light" style="margin: 0.5rem 0 !important;">
+          <table class="table table-borderless text-dark ps-0 text-sm">
+            <tr>
+              <td style="width: 20% !important;">Nama Lengkap</td>
+              <td style="width: 5% !important;">:</td>
+              <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+            </tr>
+            <tr>
+              <td style="width: 20% !important;">Tempat, Tanggal Lahir</td>
+              <td style="width: 5% !important;">:</td>
+              <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+            </tr>
+            <tr>
+              <td style="width: 20% !important;">Jenis Kelamin</td>
+              <td style="width: 5% !important;">:</td>
+              <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+            </tr>
+            <tr>
+              <td style="width: 20% !important;">Alamat</td>
+              <td style="width: 5% !important;">:</td>
+              <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+            </tr>
+            <tr>
+              <td style="width: 20% !important;">E-mail</td>
+              <td style="width: 5% !important;">:</td>
+              <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+            </tr>
+            <tr>
+              <td style="width: 20% !important;">Nomor Telepon</td>
+              <td style="width: 5% !important;">:</td>
+              <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

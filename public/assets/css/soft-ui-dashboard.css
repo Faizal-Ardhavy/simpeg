@@ -24926,4 +24926,16 @@ pre[class*="language-"] {
   }
 }
 
+td .w-s{
+	width: 5% !important;
+}
+
+td .w-m{
+	width: 15% !important;
+}
+
+td .w-l{
+	width: 85% !important;
+}
+
 /*# sourceMappingURL=dashboard-free.css.map */
