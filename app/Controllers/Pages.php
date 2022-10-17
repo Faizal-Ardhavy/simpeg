@@ -15,6 +15,13 @@ class Pages extends BaseController
         return view('pages/dashboard', $name);
     }
 
+    public function profile()
+    {
+        $session = session();
+        $name['name'] = $session->get('pegawai_name');
+        return view('pages/profile', $name);
+    }
+
     public function login()
     {
         return view('pages/login');

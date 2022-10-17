@@ -37,6 +37,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Pages::dashboard');
 $routes->get('dashboard', 'Pages::dashboard');
+$routes->get('profile', 'Pages::profile');
 $routes->get('login', 'Login::index');
 $routes->post('login/process', 'Login::process');
 $routes->get('/register', 'Register::index');
