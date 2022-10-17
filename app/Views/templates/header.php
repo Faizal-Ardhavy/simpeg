@@ -383,6 +383,22 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="/assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
+
+<script>
+    var exampleModal = document.getElementById('exampleModal')
+    exampleModal.addEventListener('show.bs.modal', function(event) {
+
+        var button = event.relatedTarget
+
+        var recipient = button.getAttribute('data-bs-whatever')
+
+        var modalTitle = exampleModal.querySelector('.modal-title')
+        var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+        modalTitle.textContent = 'Edit Profil'
+        modalBodyInput.value = recipient
+    })
+</script>
 </body>
 
 </html>
