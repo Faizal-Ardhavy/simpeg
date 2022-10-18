@@ -16,7 +16,7 @@
             <div class="col-auto my-auto">
                 <div class="h-100">
                     <h5 class="mb-1 text-capitalize">
-                        <?= session()->get('name'); ?>
+                        <?= $data->name; ?>
                     </h5>
                     <p class="mb-0 font-weight-bold text-sm">
                         CEO / Co-Founder
@@ -51,32 +51,32 @@
                         <tr>
                             <td style="width: 20% !important;">Nama Lengkap</td>
                             <td style="width: 5% !important;">:</td>
-                            <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+                            <td style="width: 75% !important;"><?= $data->name; ?></td>
                         </tr>
                         <tr>
                             <td style="width: 20% !important;">Tanggal Lahir</td>
                             <td style="width: 5% !important;">:</td>
-                            <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+                            <td style="width: 75% !important;"><?= $data->tgl_lahir; ?></td>
                         </tr>
                         <tr>
                             <td style="width: 20% !important;">Jenis Kelamin</td>
                             <td style="width: 5% !important;">:</td>
-                            <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+                            <td style="width: 75% !important;"><?= $data->kelamin; ?></td>
                         </tr>
                         <tr>
                             <td style="width: 20% !important;">Alamat</td>
                             <td style="width: 5% !important;">:</td>
-                            <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+                            <td style="width: 75% !important;"><?= $data->alamat; ?></td>
                         </tr>
                         <tr>
                             <td style="width: 20% !important;">E-mail</td>
                             <td style="width: 5% !important;">:</td>
-                            <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+                            <td style="width: 75% !important;"><?= $data->email; ?></td>
                         </tr>
                         <tr>
                             <td style="width: 20% !important;">Nomor Telepon</td>
                             <td style="width: 5% !important;">:</td>
-                            <td style="width: 75% !important;"><?= session()->get('name'); ?></td>
+                            <td style="width: 75% !important;"><?= $data->no_telp; ?></td>
                         </tr>
                     </table>
                 </div>
@@ -92,39 +92,39 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action='updateProfile' method="POST">
                         <div class="form-floating mb-3">
-                          <input type="text" class="form-control ms-1" id="name">
+                          <input type="text" class="form-control ms-1" id="name" name="name">
                           <label for="name">Nama</label>
                         </div>
                         <div class="form-floating mb-3">
-                          <input type="date" class="form-control ms-1" id="date">
+                          <input type="date" class="form-control ms-1" id="date" name="date">
                           <label for="date">Tanggal Lahir</label>
                         </div>
                         <div class="form-floating mb-3">
-                          <select class="form-select ms-1" aria-label=".form-select-sm">
+                          <select class="form-select ms-1" aria-label=".form-select-sm" name="kelamin">
                             <option value="Laki-laki" selected>Laki-laki</option>
                             <option value="Perempuan">Perempuan</option>
                           </select>
                           <label for="gender">Jenis Kelamin</label>
                         </div>
                         <div class="form-floating mb-3">
-                          <textarea class="form-control ms-1" id="address"></textarea>
+                          <textarea class="form-control ms-1" id="address" name="address"></textarea>
                           <label for="address">Alamat</label>
                         </div>
                         <div class="form-floating mb-3">
-                          <input type="email" class="form-control ms-1" id="email">
+                          <input type="email" class="form-control ms-1" id="email" name="email">
                           <label for="email">E-mail</label>
                         </div>
                         <div class="form-floating mb-3">
-                          <input type="text" class="form-control ms-1" id="phone">
+                          <input type="text" class="form-control ms-1" id="phone" name="phone">
                           <label for="phone">Nomor Telepon</label>
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>

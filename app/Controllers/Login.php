@@ -22,7 +22,6 @@ class Login extends BaseController
             if (password_verify($password, $dataUser->password)) {
                 session()->set([
                     'username' => $dataUser->username,
-                    'name' => $dataUser->name,
                     'logged_in' => TRUE
                 ]);
                 return redirect()->to(base_url('dashboard'));

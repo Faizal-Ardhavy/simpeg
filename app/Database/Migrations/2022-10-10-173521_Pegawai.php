@@ -21,6 +21,26 @@ class Pegawai extends Migration
                 'type'           => 'VARCHAR',
                 'constraint'     => '100',
             ],
+            'tgl_lahir'       => [
+                'type'           => 'DATE',
+                'null'            => true,
+            ],
+            'kelamin'       => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '1000',
+            ],
+            'alamat'       => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '1000',
+            ],
+            'email'       => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '1000',
+            ],
+            'no_telp'       => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '1000',
+            ],
             'created_at' => [
                 'type'           => 'DATETIME',
                 'null'            => true,
