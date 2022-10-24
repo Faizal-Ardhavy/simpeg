@@ -25,6 +25,16 @@ class Pages extends BaseController
 
         return view('pages/profile', $data);
     }
+    
+    public function payroll()
+    {
+        $session = session();
+        $userModel = new PegawaiModel();
+
+        $data['data'] = $userModel->where('username', $session->get('username'))->first();
+
+        return view('pages/payroll', $data);
+    }
 
     public function login()
     {
