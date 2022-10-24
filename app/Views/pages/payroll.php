@@ -18,7 +18,7 @@
 									<h6 class="text-center mb-0">Gaji</h6>
 									<span class="text-xs">per Oktober 2022</span>
 									<hr class="horizontal dark my-3">
-									<h5 class="mb-0">Rp12.500.000</h5>
+									<h5 class="mb-0">Rp <?= $data->gaji ?></h5>
 								</div>
 							</div>
 						</div>
@@ -40,15 +40,28 @@
 							<div class="row">
 								<div class="col-12 mb-md-0 mb-4">
 									<div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-										<img class="w-10 me-3 mb-0" src="../assets/img/logos/mandiri.png" alt="logo">
-										<h6 class="mb-0">****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;7852</h6>
-										
+										<?=$img =null?>
+										<?php
+											if($data->bank=="Mandiri"){
+												$img = "../assets/img/logos/mandiri.png";
+											}else if($data->bank=="BNI"){
+												$img = "../assets/img/logos/bni.png";
+											}else if($data->bank=="BRI"){
+												$img = "../assets/img/logos/bri.jpg";
+											}else{
+												$img = "../assets/img/logos/bca.png";
+											}
+											
+										?>
+										<img class="w-10 me-3 mb-0" src=<?=$img?> alt="logo">
+										<h6 class="mb-0"><?= $data->rekening ?></h6>
+
 										<div class="col-md-4 text-end">
-                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> <?php //Tombol modal 
-                                      ?>
-                                <i class="fas fa-pencil-alt ms-auto text-dark cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card"></i>
-                            </a>
-                        </div>
+											<a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> <?php //Tombol modal 
+																																?>
+												<i class="fas fa-pencil-alt ms-auto text-dark cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card"></i>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -126,38 +139,44 @@
 			</div>
 		</div>
 		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Metode Pembayaran</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action='paymentMethod' method="POST">
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control ms-1" id="holder" name="holder">
-                          <label for="holder">Pemegang Kartu</label>
-                        </div>
-						<div class="form-floating mb-3">
-                          <input type="text" class="form-control ms-1" id="card" name="card">
-                          <label for="card">Nomor Kartu Kredit/Debit</label>
-                        </div>
-						<div class="form-floating mb-3">
-                          <input type="date" class="form-control ms-1" id="exp" name="exp">
-                          <label for="exp">Tanggal Kadaluarsa</label>
-                        </div>
-						<div class="form-floating mb-3">
-                          <input type="text" class="form-control ms-1" id="cvc" name="cvc">
-                          <label for="cvc">CVC</label>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+			<div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Metode Pembayaran</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form action='paymentMethod' method="POST">
+							<div class="form-floating mb-3">
+								<input type="text" class="form-control ms-1" id="holder" name="holder" value=<?= $data->name ?>>
+								<label for="holder">Pemegang Kartu</label>
+							</div>
+							<div class="form-floating mb-3">
+								<select class="form-control ms-1" id="bank" name="bank">
+									<option value="none" selected disabled hidden>Pilih Bank</option>
+									<option value="Mandiri">Mandiri</option>
+									<option value="BCA">BCA</option>
+									<option value="BNI">BNI</option>
+									<option value="BRI">BRI</option>
+								</select>
+								<label for="card">Jenis Bank</label>
+							</div>
+							<div class="form-floating mb-3">
+								<input type="text" class="form-control ms-1" id="card" name="card" value=<?= $data->rekening ?>>
+								<label for="card">Nomor Kartu Kredit/Debit</label>
+							</div>
+							<div class="form-floating mb-3">
+								<input type="date" class="form-control ms-1" id="exp" name="exp" value=<?= $data->tgl_kadaluarsa?>>
+								<label for="exp">Tanggal Kadaluarsa</label>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="submit" class="btn btn-primary">Save</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<?= $this->endSection() ?>
