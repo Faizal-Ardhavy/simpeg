@@ -41,6 +41,21 @@ class Pegawai extends Migration
                 'type'           => 'VARCHAR',
                 'constraint'     => '1000',
             ],
+            'gaji'       => [
+                'type'           => 'INT',
+            ],
+            'bank'       => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '1000',
+            ],
+            'rekening'       => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '1000',
+            ],
+            'tgl_kadaluarsa' => [
+                'type'           => 'DATETIME',
+                'null'            => true,
+            ],
             'created_at' => [
                 'type'           => 'DATETIME',
                 'null'            => true,

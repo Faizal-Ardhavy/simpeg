@@ -36,6 +36,29 @@ class Pages extends BaseController
         return view('pages/payroll', $data);
     }
 
+    public function paymentMethod()
+    {
+        $session = session();
+        $id        = $session->get('username');
+        $bank    = $this->request->getPost('bank');
+        $card    = $this->request->getPost('card');
+        $exp    = $this->request->getPost('exp');
+
+        $data = [
+            'bank' => $bank,
+            'rekening' => $card,
+            'tgl_kadaluarsa' => $exp,
+        ];
+        $userModel = new PegawaiModel();
+
+        $result =  $userModel->update($id, $data);
+        if ($result) {
+            return redirect()->to('payroll');
+        } else {
+            echo "Something went wrong";
+        }
+    }
+
     public function login()
     {
         return view('pages/login');

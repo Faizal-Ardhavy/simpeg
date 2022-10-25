@@ -40,7 +40,7 @@
 							<div class="row">
 								<div class="col-12 mb-md-0 mb-4">
 									<div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-										<?=$img =null?>
+										<?=$img = null?>
 										<?php
 											if($data->bank=="Mandiri"){
 												$img = "../assets/img/logos/mandiri.png";
@@ -148,10 +148,6 @@
 					<div class="modal-body">
 						<form action='paymentMethod' method="POST">
 							<div class="form-floating mb-3">
-								<input type="text" class="form-control ms-1" id="holder" name="holder" value=<?= $data->name ?>>
-								<label for="holder">Pemegang Kartu</label>
-							</div>
-							<div class="form-floating mb-3">
 								<select class="form-control ms-1" id="bank" name="bank">
 									<option value="none" selected disabled hidden>Pilih Bank</option>
 									<option value="Mandiri">Mandiri</option>
@@ -162,7 +158,7 @@
 								<label for="card">Jenis Bank</label>
 							</div>
 							<div class="form-floating mb-3">
-								<input type="text" class="form-control ms-1" id="card" name="card" value=<?= $data->rekening ?>>
+								<input type="number" class="form-control ms-1" id="card" name="card" value=<?= $data->rekening ?>>
 								<label for="card">Nomor Kartu Kredit/Debit</label>
 							</div>
 							<div class="form-floating mb-3">

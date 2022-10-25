@@ -45,6 +45,7 @@ $routes->get('/register', 'Register::index');
 $routes->post('/register/process', 'Register::process');
 $routes->get('/logout', 'Login::logout');
 $routes->post('/updateProfile', 'Pages::updateProfile');
+$routes->post('/paymentMethod', 'Pages::paymentMethod');
 $routes->get('(:any)', 'Pages::dashboard');
 
 /*
