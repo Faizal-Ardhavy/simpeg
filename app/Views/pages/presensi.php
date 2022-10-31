@@ -8,7 +8,7 @@
                 <div class="card-header pb-0">
                     <div class="row">
                         <div class="col-md-8 d-flex align-items-center">
-                            <h6 class="mb-0 mx-2">Presensi</h6>
+                            <h6 class="mb-0 mx-2">Riwayat Presensi</h6>
                         </div>
                     </div>
                 </div>
