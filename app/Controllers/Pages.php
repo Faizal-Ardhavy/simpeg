@@ -9,6 +9,10 @@ class Pages extends BaseController
     {
         return view('welcome_message');
     }
+    public function presensi()
+    {
+        return view('pages/presensi');
+    }
     public function dashboard()
     {
         $session = session();
