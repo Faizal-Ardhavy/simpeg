@@ -18,7 +18,6 @@
                     <table class="table text-dark ps-0 text-sm">
                         <tr>
                             <th style="width: 25% !important;">ID</th>
-                            <th style="width: 25% !important;">Nama</th>
                             <th style="width: 25% !important;">Tanggal</th>
                             <th style="width: 25% !important;">Keterangan</th>
                         </tr>
@@ -27,7 +26,6 @@
                         <tr>
 
                             <td style="width: 25% !important;"><?=$count++?></td>
-                            <td style="width: 25% !important;"><?=$dt->user_presensi?></td>
                             <td style="width: 25% !important;"><?=$dt->tanggal?></td>
                             <td style="width: 25% !important;"><?=$dt->keterangan?></td>
 

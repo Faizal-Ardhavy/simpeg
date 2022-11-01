@@ -12,6 +12,7 @@ class PresensiModel extends Migration
             'id'       => [
                 'type'           => 'INT',
                 'constraint'     => '100',
+                'auto_increment' => true,
             ],
             'user_presensi'          => [
                 'type'           => 'VARCHAR',
