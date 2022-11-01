@@ -13,10 +13,10 @@
 					</div>
 				</div>
 				<div class="card-body">
-					<hr class="horizontal gray-light" style="margin: 0 !important;">
+					<hr class="horizontal gray-light" style="margin: 0.5rem 0 !important;">
 					<table class="table text-dark ps-0 text-sm">
 						<tr>
-							<th style="width: 10% !important;">ID</th>
+							<th style="width: 25% !important;">ID</th>
 							<th style="width: 25% !important;">Tanggal</th>
 							<th style="width: 25% !important;">Keterangan</th>
 						</tr>
