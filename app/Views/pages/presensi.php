@@ -17,16 +17,21 @@
                     <table class="table text-dark ps-0 text-sm">
                         <tr>
                             <th style="width: 25% !important;">ID</th>
+                            <th style="width: 25% !important;">Nama</th>
                             <th style="width: 25% !important;">Tanggal</th>
-                            <th style="width: 25% !important;">Jam</th>
                             <th style="width: 25% !important;">Keterangan</th>
                         </tr>
+                            <?php $count = 0;?>
+                            <?php foreach ($data as $dt){ ?>
                         <tr>
-                            <td style="width: 25% !important;">001</td>
-                            <td style="width: 25% !important;">10-31-2022</td>
-                            <td style="width: 25% !important;">08:33</td>
-                            <td style="width: 25% !important;">Hadir</td>
+
+                            <td style="width: 25% !important;"><?=$count++?></td>
+                            <td style="width: 25% !important;"><?=$dt->user_presensi?></td>
+                            <td style="width: 25% !important;"><?=$dt->tanggal?></td>
+                            <td style="width: 25% !important;"><?=$dt->keterangan?></td>
+
                         </tr>
+                        <?php } ?>
                     </table>
                 </div>
             </div>

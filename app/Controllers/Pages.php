@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\PegawaiModel;
+use App\Models\PresensiModel;
 
 class Pages extends BaseController
 {
@@ -11,8 +12,12 @@ class Pages extends BaseController
     }
     public function presensi()
     {
-        return view('pages/presensi');
-    }
+        $session = session();
+        $userModel = new PresensiModel();
+        $data['data'] = $userModel->where('user_presensi', $session->get('username'))->first();
+
+        return view('pages/presensi', $data);
+        }
     public function dashboard()
     {
         $session = session();
