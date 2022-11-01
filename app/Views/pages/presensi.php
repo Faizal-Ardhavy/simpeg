@@ -2,7 +2,6 @@
 
 <?= $this->section('content') ?>
 <div class="container-fluid py-4">
-<<<<<<< HEAD
     <div class="row">
         <div class="col-12">
             <div class="card h-100">
