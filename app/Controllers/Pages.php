@@ -14,10 +14,10 @@ class Pages extends BaseController
     {
         $session = session();
         $userModel = new PresensiModel();
-        $data['data'] = $userModel->where('user_presensi', $session->get('username'))->first();
-
+        $data['data'] = $userModel->where('user_presensi', $session->get('username'))->find();
+        // dd($data['data']);
         return view('pages/presensi', $data);
-        }
+    }
     public function dashboard()
     {
         $session = session();
