@@ -101,8 +101,13 @@ class Pages extends BaseController
 		}
     }
 
+    public function admin(){
+        return view('admin/pages/dashboard');
+    }
+
     public function signup()
     {
         return view('pages/register');
     }
+
 }
