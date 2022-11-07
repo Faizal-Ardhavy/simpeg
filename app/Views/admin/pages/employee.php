@@ -16,14 +16,14 @@
 					<hr class="horizontal gray-light" style="margin: 0 !important;">
 					<table class="table text-dark ps-0 text-sm">
 						<tr>
-							<th style="width: 10% !important;">ID</th>
-							<th style="width: 25% !important;">Nama</th>
-							<th style="width: 25% !important;">Tanggal Lahir</th>
-							<th style="width: 25% !important;">Jenis Kelamin</th>
-							<th style="width: 25% !important;">Alamat</th>
-							<th style="width: 25% !important;">Email</th>
-							<th style="width: 25% !important;">No. Telepon</th>
-							<th style="width: 25% !important;">Opsi</th>
+							<th style="">ID</th>
+							<th style="">Nama</th>
+							<th style="">Tanggal Lahir</th>
+							<th style="">Jenis Kelamin</th>
+							<th style="">Alamat</th>
+							<th style="">Email</th>
+							<th style="">No. Telepon</th>
+							<th style="">Opsi</th>
 						</tr>
 					</table>
 				</div>
