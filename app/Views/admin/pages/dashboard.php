@@ -1,4 +1,4 @@
-<?= $this->extend('templates/header') ?>
+<?= $this->extend('admin/templates/header') ?>
 
 <?= $this->section('content') ?>
 <div class="container-fluid py-4">
@@ -16,7 +16,7 @@
                 </h5>
               </div>
             </div>
-            <div class="col-4 text-end">
+            <div class="col-S text-end">
               <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
                 <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
               </div>

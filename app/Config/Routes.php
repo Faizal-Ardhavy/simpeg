@@ -49,7 +49,6 @@ $routes->get('/logout', 'Login::logout');
 $routes->post('/updateProfile', 'Pages::updateProfile');
 $routes->post('/paymentMethod', 'Pages::paymentMethod');
 $routes->get('admin/dashboard', 'Pages::dashboardAdmin');
-$routes->get('(:any)', 'Pages::dashboard');
 
 /*
  * --------------------------------------------------------------------
