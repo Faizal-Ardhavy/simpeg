@@ -1,4 +1,4 @@
-<?= $this->extend('templates/header') ?>
+<?= $this->extend('admin/templates/header') ?>
 
 <?= $this->section('content') ?>
 <div class="container-fluid py-4">
