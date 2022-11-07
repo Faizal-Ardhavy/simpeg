@@ -10,5 +10,5 @@ class PegawaiModel extends Model
     protected $primaryKey = "username";
     protected $returnType = "object";
     protected $useTimestamps = true;
-    protected $allowedFields = ['username', 'password','role', 'name','tgl_lahir', 'kelamin', 'alamat', 'email', 'no_telp','gaji','rekening','bank','tgl_kadaluarsa'];
+    protected $allowedFields = ['username', 'password','role','jabatan', 'name','tgl_lahir', 'kelamin', 'alamat', 'email', 'no_telp','gaji','rekening','bank','tgl_kadaluarsa'];
 }

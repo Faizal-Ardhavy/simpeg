@@ -67,6 +67,10 @@ class Pegawai extends Migration
             'role' => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '1000', 
+            ],
+            'jabatan' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '1000', 
             ]
 
         ]);
