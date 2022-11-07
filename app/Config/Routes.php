@@ -47,7 +47,7 @@ $routes->post('/register/process', 'Register::process');
 $routes->get('/logout', 'Login::logout');
 $routes->post('/updateProfile', 'Pages::updateProfile');
 $routes->post('/paymentMethod', 'Pages::paymentMethod');
-$routes->get('admin/dashboard', 'Pages::admin');
+$routes->get('admin/dashboard', 'Pages::dashboardAdmin');
 $routes->get('(:any)', 'Pages::dashboard');
 
 /*

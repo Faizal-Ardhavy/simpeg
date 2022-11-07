@@ -101,7 +101,8 @@ class Pages extends BaseController
 		}
     }
 
-    public function admin(){
+    public function dashboardAdmin()
+    {
         return view('admin/pages/dashboard');
     }
 
