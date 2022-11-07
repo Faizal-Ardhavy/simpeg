@@ -63,6 +63,10 @@ class Pegawai extends Migration
             'updated_at' => [
                 'type'           => 'DATETIME',
                 'null'            => true,
+            ],
+            'role' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '1000', 
             ]
 
         ]);

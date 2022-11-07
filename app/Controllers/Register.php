@@ -52,7 +52,8 @@ class Register extends BaseController
         $pegawai->insert([
             'username' => $this->request->getVar('username'),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
-            'name' => $this->request->getVar('name')
+            'name' => $this->request->getVar('name'),
+            'role' => "pegawai"
         ]);
         return redirect()->to(base_url().'/login');
     }
