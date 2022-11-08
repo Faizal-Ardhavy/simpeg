@@ -20,11 +20,24 @@ class Login extends BaseController
         ])->first();
         if ($dataUser) {
             if (password_verify($password, $dataUser->password)) {
-                session()->set([
-                    'username' => $dataUser->username,
-                    'logged_in' => TRUE
-                ]);
-                return redirect()->to(base_url('dashboardAdmin'));
+                if($dataUser->role=="admin"){
+                    session()->set([
+                        'username' => $dataUser->username,
+                        'admin' => TRUE,
+                        'logged_in' => false,
+                    ]);
+                    return redirect()->to(base_url('dashboardAdmin'));
+                }else{
+                    session()->set([
+                        'username' => $dataUser->username,
+                        'logged_in' => TRUE,
+                        'admin' => false
+                    ]);
+                    return redirect()->to(base_url('dashboard'));
+                }
+
+
+                
             } else {
                 session()->setFlashdata('error', 'Username & Password Salah');
                 return redirect()->back();
