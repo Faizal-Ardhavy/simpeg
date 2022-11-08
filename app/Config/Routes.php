@@ -36,8 +36,8 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Pages::dashboard');
-$routes->get('dashboard', 'Pages::dashboard');
-$routes->get('dashboardAdmin', 'AdminPages::dashboard');
+$routes->get('pegawaiDashboard', 'Pages::dashboard');
+$routes->get('adminDashboard', 'AdminPages::dashboard');
 $routes->get('employee', 'AdminPages::employee');
 $routes->get('profile', 'Pages::profile');
 $routes->get('payroll', 'Pages::payroll');

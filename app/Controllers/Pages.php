@@ -6,12 +6,22 @@ use App\Models\PresensiModel;
 
 class Pages extends BaseController
 {
+    private function checkRole(){
+        $session = session();
+        if ($session->role == 'pegawai') {
+            return true;
+        }else{
+            echo "<script type='text/javascript'>alert('Anda bukan pegawai');</script>";
+            return redirect()->back();
+        }
+    }
     public function index()
     {
         return view('welcome_message');
     }
     public function presensi()
     {
+        $this->checkRole();
         $session = session();
         $userModel = new PresensiModel();
         $data['data'] = $userModel->where('user_presensi', $session->get('username'))->find();
@@ -20,6 +30,7 @@ class Pages extends BaseController
     }
     public function dashboard()
     {
+        $this->checkRole();
         $session = session();
         $name['name'] = $session->get('pegawai_name');
         return view('pages/dashboard', $name);
@@ -27,6 +38,7 @@ class Pages extends BaseController
 
     public function profile()
     {
+        $this->checkRole();
         $session = session();
         $userModel = new PegawaiModel();
 
@@ -37,6 +49,7 @@ class Pages extends BaseController
     
     public function payroll()
     {
+        $this->checkRole();
         $session = session();
         $userModel = new PegawaiModel();
 
@@ -47,6 +60,7 @@ class Pages extends BaseController
 
     public function paymentMethod()
     {
+        $this->checkRole();
         $session = session();
         $id        = $session->get('username');
         $bank    = $this->request->getPost('bank');
@@ -74,6 +88,7 @@ class Pages extends BaseController
     }
     public function updateProfile()
     {
+        $this->checkRole();
         $session = session();
         $id		= $session->get('username');
 		$name	= $this->request->getPost('name');

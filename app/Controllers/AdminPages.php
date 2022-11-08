@@ -10,33 +10,22 @@ class AdminPages extends BaseController
 	public function dashboard()
 	{
 		$session = session();
-		if($session->admin!=true){
+		if($session->role!='admin'){
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
-			if($session->logged_in!=false){
-				return view('pages/dashboard');
-			}else{
-				return view('pages/login');
-			}
-		}else{
-			$name['name'] = $session->get('pegawai_name');
-			return view('admin/pages/dashboard', $name);
+			return redirect()->back();
 		}
-
+		$name['name'] = $session->get('pegawai_name');
+		return view('admin/pages/dashboard', $name);
 	}
 
 	public function employee()
 	{
 		$session = session();
-		if($session->admin!=true){
+		if ($session->role != 'admin') {
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
-			if($session->logged_in!=false){
-				return view('pages/dashboard');
-			}else{
-				return view('pages/login');
-			}
-		}else{
-			$name['name'] = $session->get('pegawai_name');
-			return view('admin/pages/employee', $name);
+			return redirect()->back();
 		}
+		$name['name'] = $session->get('pegawai_name');
+		return view('admin/pages/employee', $name);
 	}
 }
