@@ -1,18 +1,20 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\PegawaiModel;
 use App\Models\PresensiModel;
 
 class Pages extends BaseController
 {
-    private function checkRole(){
+    private function checkRole()
+    {
         $session = session();
         if ($session->role == 'pegawai') {
             return true;
-        }else{
+        } else {
             echo "<script type='text/javascript'>alert('Anda bukan pegawai');</script>";
-            return redirect()->back();
+            return false;
         }
     }
     public function index()
@@ -21,7 +23,9 @@ class Pages extends BaseController
     }
     public function presensi()
     {
-        $this->checkRole();
+        if (!$this->checkRole()) {
+            return redirect()->back();
+        }
         $session = session();
         $userModel = new PresensiModel();
         $data['data'] = $userModel->where('user_presensi', $session->get('username'))->find();
@@ -30,7 +34,9 @@ class Pages extends BaseController
     }
     public function dashboard()
     {
-        $this->checkRole();
+        if (!$this->checkRole()) {
+            return redirect()->back();
+        }
         $session = session();
         $name['name'] = $session->get('pegawai_name');
         return view('pages/dashboard', $name);
@@ -38,7 +44,9 @@ class Pages extends BaseController
 
     public function profile()
     {
-        $this->checkRole();
+        if (!$this->checkRole()) {
+            return redirect()->back();
+        }
         $session = session();
         $userModel = new PegawaiModel();
 
@@ -46,10 +54,12 @@ class Pages extends BaseController
 
         return view('pages/profile', $data);
     }
-    
+
     public function payroll()
     {
-        $this->checkRole();
+        if (!$this->checkRole()) {
+            return redirect()->back();
+        }
         $session = session();
         $userModel = new PegawaiModel();
 
@@ -60,7 +70,9 @@ class Pages extends BaseController
 
     public function paymentMethod()
     {
-        $this->checkRole();
+        if (!$this->checkRole()) {
+            return redirect()->back();
+        }
         $session = session();
         $id        = $session->get('username');
         $bank    = $this->request->getPost('bank');
@@ -88,37 +100,38 @@ class Pages extends BaseController
     }
     public function updateProfile()
     {
-        $this->checkRole();
+        if (!$this->checkRole()) {
+            return redirect()->back();
+        }
         $session = session();
-        $id		= $session->get('username');
-		$name	= $this->request->getPost('name');
-		$date	= $this->request->getPost('date');
-		$kelamin		= $this->request->getPost('kelamin');
-		$address		= $this->request->getPost('address');
-		$email		= $this->request->getPost('email');
-		$phone		= $this->request->getPost('phone');
+        $id        = $session->get('username');
+        $name    = $this->request->getPost('name');
+        $date    = $this->request->getPost('date');
+        $kelamin        = $this->request->getPost('kelamin');
+        $address        = $this->request->getPost('address');
+        $email        = $this->request->getPost('email');
+        $phone        = $this->request->getPost('phone');
 
-		$data = [
+        $data = [
             'name' => $name,
             'tgl_lahir' => $date,
             'kelamin' => $kelamin,
             'alamat' => $address,
-            'email' => $email,	
-            'no_telp' => $phone,	
-		];
+            'email' => $email,
+            'no_telp' => $phone,
+        ];
         $userModel = new PegawaiModel();
 
-		$result =  $userModel->update($id, $data);
-		if($result) {
-			return redirect()->to('profile');
-		} else {
-			echo "Something went wrong";
-		}
+        $result =  $userModel->update($id, $data);
+        if ($result) {
+            return redirect()->to('profile');
+        } else {
+            echo "Something went wrong";
+        }
     }
 
     public function signup()
     {
         return view('pages/register');
     }
-
 }
