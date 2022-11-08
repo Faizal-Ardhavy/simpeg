@@ -25,6 +25,17 @@
 							<th style="">No. Telepon</th>
 							<th style="">Opsi</th>
 						</tr>
+						<?php foreach ($employee as $dt) { ?>
+							<tr>
+								<td style="">ID</td>
+								<td style=""><?= $dt->name; ?></td>
+								<td style=""><?= $dt->tgl_lahir; ?></td>
+								<td style=""><?= $dt->kelamin; ?></td>
+								<td style="">Email</td>
+								<td style="">No. Telepon</td>
+								<td style="">Opsi</td>
+							</tr>
+						<?php } ?>
 					</table>
 				</div>
 			</div>

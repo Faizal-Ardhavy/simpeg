@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\Exceptions\AlertError;
+use App\Models\PegawaiModel;
 
 class AdminPages extends BaseController
 {
@@ -25,7 +26,9 @@ class AdminPages extends BaseController
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
-		$name['name'] = $session->get('pegawai_name');
-		return view('admin/pages/employee', $name);
+		$userModel = new PegawaiModel();
+		$data['name'] = $session->get('username');
+		$data['employee'] = $userModel->find();
+		return view('admin/pages/employee', $data);
 	}
 }
