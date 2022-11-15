@@ -21,7 +21,7 @@
 							<th style="">Jabatan</th>
 							<th style="">Gaji</th>
 							<th style="">Masa Berlaku</th>
-							<th style="">Aksi</th>
+							<th style=""></th>
 						</tr>
 						<?php foreach ($employee as $dt) { ?>
 						<tr>

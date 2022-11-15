@@ -23,7 +23,7 @@
 							<th style="">Alamat</th>
 							<th style="">Email</th>
 							<th style="">No. Telepon</th>
-							<th style="">Aksi</th>
+							<th style=""></th>
 						</tr>
 						<?php foreach ($employee as $dt) { ?>
 						<tr>
@@ -36,9 +36,10 @@
 							<td style="">No. Telepon</td>
 							<td style="">
 								<div class="row row-cols-auto">
-									<a class="" type="button" data-bs-toggle="tooltip" data-bs-placement="top"
-										title="Edit" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-											class="bi bi-pencil"></i></a>
+									<a class="" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+										<i class="bi bi-pencil" data-bs-toggle="tooltip" data-bs-placement="top"
+											title="Edit" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+									</a>
 									<a class="" type="button" data-bs-toggle="tooltip" data-bs-placement="top"
 										title="Delete"><i class="bi bi-trash2"></i></a>
 								</div>
@@ -88,6 +89,13 @@
 						<input type="text" class="form-control ms-1" id="phone" name="phone">
 						<label for="phone">Nomor Telepon</label>
 					</div>
+					<div class="form-floating mb-3">
+						<select class="form-select ms-1" aria-label=".form-select-sm" name="role">
+							<option value="Pegawai" selected>Pegawai</option>
+							<option value="Administrator">Administrator</option>
+						</select>
+						<label for="role">Role</label>
+					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 						<button type="submit" class="btn btn-primary">Save</button>
@@ -103,8 +111,6 @@ var exampleModal = document.getElementById('exampleModal')
 exampleModal.addEventListener('show.bs.modal', function(event) {
 
 	var button = event.relatedTarget
-
-	var recipient = button.getAttribute('data-bs-whatever')
 
 	var modalTitle = exampleModal.querySelector('.modal-title')
 	var modalBodyInput = exampleModal.querySelector('.modal-body input')
