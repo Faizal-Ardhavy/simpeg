@@ -40,8 +40,8 @@ $routes->set404Override();
 $routes->get('adminDashboard', 'AdminPages::dashboard');
 $routes->get('employee', 'AdminPages::employee');
 $routes->get('payroll', 'AdminPages::payroll');
-$routes->get('presensi', 'AdminPages::presensi');
-
+$routes->get('AdminPresensi', 'AdminPages::presensi');
+$routes->get('Presensi', 'Pages::presensi');
 $routes->get('/', 'Pages::dashboard');
 $routes->get('pegawaiDashboard', 'Pages::dashboard');
 $routes->get('profile', 'Pages::profile');

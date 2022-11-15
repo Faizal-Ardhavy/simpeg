@@ -20,7 +20,7 @@
 							<th style="width: 25% !important;">Tanggal</th>
 							<th style="width: 25% !important;">Keterangan</th>
 						</tr>
-						<?php $count = 0; ?>
+						<?php $count = 1; ?>
 						<?php foreach ($data as $dt) { ?>
 						<tr>
 

@@ -28,7 +28,7 @@ class Pages extends BaseController
         }
         $session = session();
         $userModel = new PresensiModel();
-        $data['data'] = $userModel->where('user_presensi', $session->get('username'))->find();
+        $data['data'] = $userModel->where('user_presensi', $session->get('username'))->findAll();
         // dd($data['data']);
         return view('pages/presensi', $data);
     }
