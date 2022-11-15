@@ -21,13 +21,12 @@
 							<th style="width: 25% !important;">Tanggal</th>
 							<th style="width: 25% !important;">Keterangan</th>
 						</tr>
-						<?php $count = 0; ?>
-						<?php foreach ($employee as $dt) { ?>
+						<?php foreach ($data as $dt) { ?>
 						<tr>
-							<td style="width: 10% !important;"><?= ++$count ?></td>
-							<td style="width: 10% !important;"><?= $dt->name; ?></td>
-							<td style="width: 25% !important;"></td>
-							<td style="width: 25% !important;"></td>
+							<td style="width: 10% !important;"><?= $dt->id; ?></td>
+							<td style="width: 10% !important;"><?= $dt->user_presensi; ?></td>
+							<td style="width: 25% !important;"><?= $dt->tanggal; ?></td>
+							<td style="width: 25% !important;"><?= $dt->keterangan; ?></td>
 						</tr>
 						<?php } ?>
 					</table>
