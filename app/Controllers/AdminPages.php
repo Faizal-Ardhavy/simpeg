@@ -11,7 +11,7 @@ class AdminPages extends BaseController
 	public function dashboard()
 	{
 		$session = session();
-		if($session->role!='admin'){
+		if ($session->role != 'admin') {
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
@@ -30,5 +30,18 @@ class AdminPages extends BaseController
 		$data['name'] = $session->get('username');
 		$data['employee'] = $userModel->find();
 		return view('admin/pages/employee', $data);
+	}
+
+	public function payroll()
+	{
+		$session = session();
+		if ($session->role != 'admin') {
+			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
+			return redirect()->back();
+		}
+		$userModel = new PegawaiModel();
+		$data['name'] = $session->get('username');
+		$data['employee'] = $userModel->find();
+		return view('admin/pages/payroll', $data);
 	}
 }
