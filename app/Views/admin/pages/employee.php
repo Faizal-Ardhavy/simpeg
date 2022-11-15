@@ -36,9 +36,8 @@
 							<td style="">No. Telepon</td>
 							<td style="">
 								<div class="row row-cols-auto">
-									<a class="" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-										<i class="bi bi-pencil" data-bs-toggle="tooltip" data-bs-placement="top"
-											title="Edit" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+									<a class="" type="button" href="AdminEditEmployee">
+										<i class="bi bi-pencil"></i>
 									</a>
 									<a class="" type="button" data-bs-toggle="tooltip" data-bs-placement="top"
 										title="Delete"><i class="bi bi-trash2"></i></a>
