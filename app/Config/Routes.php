@@ -38,8 +38,8 @@ $routes->set404Override();
 
 /* Admin */
 $routes->get('adminDashboard', 'AdminPages::dashboard');
-$routes->get('employee', 'AdminPages::employee');
-$routes->get('payroll', 'AdminPages::payroll');
+$routes->get('AdminEmployee', 'AdminPages::employee');
+$routes->get('AdminPayroll', 'AdminPages::payroll');
 $routes->post('updateProfile', 'AdminPages::updateProfile');
 $routes->get('AdminPresensi', 'AdminPages::presensi');
 $routes->get('Presensi', 'Pages::presensi');
