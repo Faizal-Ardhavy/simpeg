@@ -41,6 +41,7 @@ $routes->get('adminDashboard', 'AdminPages::dashboard');
 $routes->get('AdminEmployee', 'AdminPages::employee');
 $routes->get('AdminEditEmployee', 'AdminPages::editEmployee');
 $routes->get('AdminPayroll', 'AdminPages::payroll');
+$routes->get('AdminEditPayroll', 'AdminPages::editPayroll');
 $routes->post('updateProfile', 'AdminPages::updateProfile');
 $routes->get('AdminPresensi', 'AdminPages::presensi');
 $routes->get('Presensi', 'Pages::presensi');
