@@ -36,7 +36,7 @@
 							<td style="">No. Telepon</td>
 							<td style="">
 								<div class="row row-cols-auto">
-									<a class="" type="button" href="AdminEditEmployee">
+									<a class="" type="button" href="AdminEditEmployee/<?= $dt->username; ?>">
 										<i class="bi bi-pencil"></i>
 									</a>
 									<a class="" type="button" data-bs-toggle="tooltip" data-bs-placement="top"

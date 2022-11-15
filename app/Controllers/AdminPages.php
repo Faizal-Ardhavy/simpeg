@@ -121,15 +121,14 @@ class AdminPages extends BaseController
 		return view('admin/pages/presensi', $data);
 	}
 
-	public function editEmployee()
+	public function editEmployee($id)
 	{
 		$session  = session();
 		if ($session->role != 'admin') {
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
-		$presensiModel = new PresensiModel();
-		$data["data"] = $presensiModel->findAll();
+		$data["data"] = $id;
 		return view('admin/pages/editEmployee', $data);
 	}
 }
