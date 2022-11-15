@@ -44,4 +44,17 @@ class AdminPages extends BaseController
 		$data['employee'] = $userModel->find();
 		return view('admin/pages/payroll', $data);
 	}
+
+	public function presensi()
+	{
+		$session = session();
+		if ($session->role != 'admin') {
+			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
+			return redirect()->back();
+		}
+		$userModel = new PegawaiModel();
+		$data['name'] = $session->get('username');
+		$data['employee'] = $userModel->find();
+		return view('admin/pages/presensi', $data);
+	}
 }

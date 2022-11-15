@@ -35,6 +35,7 @@
 									<a class="" type="button" data-bs-toggle="tooltip" data-bs-placement="top"
 										title="Edit" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
 											class="bi bi-pencil"></i></a>
+								</div>
 							</td>
 						</tr>
 						<?php } ?>
