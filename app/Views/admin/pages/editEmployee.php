@@ -14,7 +14,7 @@
 				</div>
 				<div class="card-body">
 					<hr class="horizontal gray-light" style="margin: 0.5rem 0 !important;">
-					<form action='updateProfile' method="POST">
+					<form action="updateProfile" method="POST">
 						<div class="form-floating mb-3">
 							<input type="text" class="form-control ms-1" id="name" name="name">
 							<label for="name">Nama</label>
