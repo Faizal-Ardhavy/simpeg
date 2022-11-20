@@ -160,4 +160,12 @@ class AdminPages extends BaseController
 		$data['data'] = $id;
 		return view('admin/pages/editPayroll', $data);
 	}
+	public function report(){
+		$session  = session();
+		if ($session->role != 'admin') {
+			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
+			return redirect()->back();
+		}
+		return view('admin/pages/laporan');
+	}
 }

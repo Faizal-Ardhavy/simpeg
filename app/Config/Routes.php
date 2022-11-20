@@ -38,6 +38,7 @@ $routes->set404Override();
 
 /* Admin */
 $routes->get('adminDashboard', 'AdminPages::dashboard');
+$routes->get('adminLaporan', 'AdminPages::report');
 $routes->get('AdminEmployee', 'AdminPages::employee');
 $routes->get('AdminEditEmployee/(:any)', 'AdminPages::editEmployee/$1');
 $routes->get('AdminDeleteEmployee/(:any)', 'AdminPages::deleteEmployee/$1');
