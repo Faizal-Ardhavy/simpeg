@@ -93,6 +93,12 @@ class Pages extends BaseController
             echo "Something went wrong";
         }
     }
+    public function laporan(){
+        if (!$this->checkRole()) {
+            return redirect()->back();
+        }
+        return view('pages/laporan');
+    }
 
     public function login()
     {

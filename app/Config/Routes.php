@@ -52,6 +52,7 @@ $routes->get('/', 'Pages::dashboard');
 $routes->get('pegawaiDashboard', 'Pages::dashboard');
 $routes->get('profile', 'Pages::profile');
 $routes->get('payroll', 'Pages::payroll');
+$routes->get('laporan', 'Pages::laporan');
 $routes->get('presensi', 'Pages::presensi');
 $routes->get('login', 'Login::index');
 $routes->post('login/process', 'Login::process');
