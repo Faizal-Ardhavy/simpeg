@@ -39,10 +39,12 @@ $routes->set404Override();
 /* Admin */
 $routes->get('adminDashboard', 'AdminPages::dashboard');
 $routes->get('AdminEmployee', 'AdminPages::employee');
-$routes->get('AdminEditEmployee', 'AdminPages::editEmployee');
+$routes->get('AdminEditEmployee/(:any)', 'AdminPages::editEmployee/$1');
+$routes->get('AdminDeleteEmployee/(:any)', 'AdminPages::deleteEmployee/$1');
 $routes->get('AdminPayroll', 'AdminPages::payroll');
-$routes->get('AdminEditPayroll', 'AdminPages::editPayroll');
-$routes->post('updateProfile', 'AdminPages::updateProfile');
+$routes->get('AdminEditPayroll/(:any)', 'AdminPages::editPayroll/$1');
+$routes->post('AdminEditEmployee/updateProfile', 'AdminPages::updateProfile');
+$routes->post('AdminEditPayroll/updatePayroll', 'AdminPages::updatePayroll');
 $routes->get('AdminPresensi', 'AdminPages::presensi');
 $routes->get('Presensi', 'Pages::presensi');
 $routes->get('/', 'Pages::dashboard');

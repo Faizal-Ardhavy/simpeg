@@ -14,7 +14,7 @@
 				</div>
 				<div class="card-body">
 					<hr class="horizontal gray-light" style="margin: 0.5rem 0 !important;">
-					<form action="updateProfile" method="POST">
+					<form action='updateProfile' method="POST">
 						<div class="form-floating mb-3">
 							<input type="text" class="form-control ms-1" id="name" name="name">
 							<label for="name">Nama</label>
@@ -42,8 +42,16 @@
 							<input type="text" class="form-control ms-1" id="phone" name="phone">
 							<label for="phone">Nomor Telepon</label>
 						</div>
+						<div class="form-floating mb-3">
+							<select class="form-select ms-1" aria-label=".form-select-sm" name="role">
+								<option value="Pegawai" selected>Pegawai</option>
+								<option value="Administrator">Administrator</option>
+							</select>
+							<label for="role">Role</label>
+						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							<input type="hidden" class="form-control ms-1" name="id" value="<?= $data ?>">
+							<button type="button" class="btn btn-secondary">Close</button>
 							<button type="submit" class="btn btn-primary">Save</button>
 						</div>
 					</form>

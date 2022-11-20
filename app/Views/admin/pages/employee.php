@@ -16,31 +16,36 @@
 					<hr class="horizontal gray-light" style="margin: 0 !important;">
 					<table class="table text-dark ps-0 text-sm">
 						<tr>
-							<th style="">ID</th>
+							<th style="">No</th>
 							<th style="">Nama</th>
 							<th style="">Tanggal Lahir</th>
 							<th style="">Jenis Kelamin</th>
 							<th style="">Alamat</th>
 							<th style="">Email</th>
 							<th style="">No. Telepon</th>
+							<th style="">Role</th>
 							<th style=""></th>
 						</tr>
+						<?php $count = 0 ?>
 						<?php foreach ($employee as $dt) { ?>
 						<tr>
-							<td style="">ID</td>
+							<td style=""><?= ++$count; ?></td>
 							<td style=""><?= $dt->name; ?></td>
 							<td style=""><?= $dt->tgl_lahir; ?></td>
 							<td style=""><?= $dt->kelamin; ?></td>
-							<td style="">Alamat</td>
-							<td style="">Email</td>
-							<td style="">No. Telepon</td>
+							<td style=""><?= $dt->alamat; ?></td>
+							<td style=""><?= $dt->email; ?></td>
+							<td style=""><?= $dt->no_telp; ?></td>
+							<td style=""><?= $dt->role; ?></td>
 							<td style="">
 								<div class="row row-cols-auto">
-									<a class="" type="button" href="AdminEditEmployee">
+									<a class="" type="button" href="AdminEditEmployee/<?= $dt->username; ?>"
+										data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
 										<i class="bi bi-pencil"></i>
 									</a>
-									<a class="" type="button" data-bs-toggle="tooltip" data-bs-placement="top"
-										title="Delete"><i class="bi bi-trash2"></i></a>
+									<a class="" type="button" href="AdminDeleteEmployee/<?= $dt->username; ?>"
+										data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i
+											class="bi bi-trash2"></i></a>
 								</div>
 							</td>
 						</tr>

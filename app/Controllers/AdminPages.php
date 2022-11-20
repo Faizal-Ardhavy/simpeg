@@ -32,6 +32,7 @@ class AdminPages extends BaseController
 		$data['employee'] = $userModel->find();
 		return view('admin/pages/employee', $data);
 	}
+
 	public function updateProfile()
 	{
 		$session = session();
@@ -39,7 +40,7 @@ class AdminPages extends BaseController
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
-		$id        = $session->get('username');
+		$id        = $this->request->getPost('id');
 		$name    = $this->request->getPost('name');
 		$date    = $this->request->getPost('date');
 		$kelamin    = $this->request->getPost('kelamin');
@@ -58,15 +59,29 @@ class AdminPages extends BaseController
 			'no_telp' => $phone,
 			'role' => $role,
 		];
-
+		// dd($data);
 		$userModel = new PegawaiModel();
 
 		$result =  $userModel->update($id, $data);
 		if ($result) {
-			return redirect()->to('employee');
+			return redirect()->to('AdminEmployee');
 		} else {
 			echo "Something went wrong";
 		}
+	}
+
+	public function deleteEmployee($id)
+	{
+		$session  = session();
+		if ($session->role != 'admin') {
+			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
+			return redirect()->back();
+		}
+		$userModel = new PegawaiModel();
+		$user = $userModel->where([
+			'username' => $this->request->getPost('id'),
+		])->delete();
+		return redirect()->to(previous_url());
 	}
 
 	public function payroll()
@@ -89,7 +104,7 @@ class AdminPages extends BaseController
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
-		$id        = $session->get('username');
+		$id        = $this->request->getPost('id');
 		$jabatan    = $this->request->getPost('jabatan');
 		$gaji    = $this->request->getPost('gaji');
 
@@ -102,10 +117,11 @@ class AdminPages extends BaseController
 		$userModel = new PegawaiModel();
 
 		$result =  $userModel->update($id, $data);
+
 		if ($result) {
-			return redirect()->to('employee');
+			return redirect()->to('AdminPayroll');
 		} else {
-			echo "Something went wrong";
+			echo "Something went wrong";
 		}
 	}
 
@@ -121,27 +137,27 @@ class AdminPages extends BaseController
 		return view('admin/pages/presensi', $data);
 	}
 
-	public function editEmployee()
+	public function editEmployee($id)
 	{
 		$session  = session();
 		if ($session->role != 'admin') {
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
-		$presensiModel = new PresensiModel();
-		$data["data"] = $presensiModel->findAll();
+		$data['data'] = $id;
 		return view('admin/pages/editEmployee', $data);
+		// dd($data);
 	}
 
-	public function editPayroll()
+	public function editPayroll($id)
 	{
 		$session  = session();
 		if ($session->role != 'admin') {
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
-		$presensiModel = new PresensiModel();
-		$data["data"] = $presensiModel->findAll();
+
+		$data['data'] = $id;
 		return view('admin/pages/editPayroll', $data);
 	}
 }

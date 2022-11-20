@@ -14,10 +14,10 @@
 				</div>
 				<div class="card-body">
 					<hr class="horizontal gray-light" style="margin: 0.5rem 0 !important;">
-					<form action="" method="POST">
+					<form action="updatePayroll" method="POST">
 						<div class="form-floating mb-3">
-							<input disabled type="text" class="form-control ms-1" id="name" name="name">
-							<label for="name">Nama</label>
+							<input type="hidden" class="form-control ms-1" id="id" name="id" value="<?= $data ?>">
+							<label for="id">Username</label>
 						</div>
 						<div class="form-floating mb-3">
 							<select class="form-select ms-1" aria-label=".form-select-sm" name="jabatan">
@@ -30,12 +30,12 @@
 							<input type="text" class="form-control ms-1" id="gaji" name="gaji">
 							<label for="gaji">Gaji</label>
 						</div>
-						<div class="form-floating mb-3">
+						<!-- <div class="form-floating mb-3">
 							<input type="date" class="form-control ms-1" id="masa_berlaku" name="masa_berlaku">
 							<label for="masa_berlaku">Masa Berlaku</label>
-						</div>
+						</div> -->
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							<a type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
 							<button type="submit" class="btn btn-primary">Save</button>
 						</div>
 					</form>

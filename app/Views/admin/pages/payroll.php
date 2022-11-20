@@ -16,23 +16,24 @@
 					<hr class="horizontal gray-light" style="margin: 0 !important;">
 					<table class="table text-dark ps-0 text-sm">
 						<tr>
-							<th style="">ID</th>
+							<th style="">No</th>
 							<th style="">Nama</th>
 							<th style="">Jabatan</th>
 							<th style="">Gaji</th>
-							<th style="">Masa Berlaku</th>
+							<!-- <th style="">Masa Berlaku</th> -->
 							<th style=""></th>
 						</tr>
+						<?php $count = 0 ?>
 						<?php foreach ($employee as $dt) { ?>
 						<tr>
-							<td style="">ID</td>
+							<td style=""><?= ++$count; ?></td>
 							<td style=""><?= $dt->name; ?></td>
-							<td style="">Jabatan</td>
-							<td style="">Gaji</td>
-							<td style="">Masa Berlaku</td>
+							<td style=""><?= $dt->jabatan; ?></td>
+							<td style=""><?= $dt->gaji; ?></td>
+							<!-- <td style="">Masa Berlaku</td> -->
 							<td style="">
 								<div class="row row-cols-auto">
-									<a class="" type="button" href="AdminEditPayroll">
+									<a class="" type="button" href="AdminEditPayroll/<?= $dt->username; ?>">
 										<i class="bi bi-pencil"></i>
 									</a>
 								</div>
