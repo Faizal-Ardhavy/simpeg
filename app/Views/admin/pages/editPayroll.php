@@ -30,10 +30,6 @@
 							<input type="text" class="form-control ms-1" id="gaji" name="gaji">
 							<label for="gaji">Gaji</label>
 						</div>
-						<!-- <div class="form-floating mb-3">
-							<input type="date" class="form-control ms-1" id="masa_berlaku" name="masa_berlaku">
-							<label for="masa_berlaku">Masa Berlaku</label>
-						</div> -->
 						<div class="modal-footer">
 							<a type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
 							<button type="submit" class="btn btn-primary">Save</button>

@@ -40,15 +40,36 @@
 					</header>
 					<h6 class="mt-5 text-uppercase"><b>Data Diri Pegawai</b></h6>
 					<table class="table table-borderless table-responsive">
-						<thead>
-							<tr>
-
-							</tr>
-						</thead>
-
 						<tbody>
 							<tr>
-
+								<td>Nama Lengkap</td>
+								<td>:</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Tanggal Lahir</td>
+								<td>:</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Jenis Kelamin</td>
+								<td>:</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Alamat</td>
+								<td>:</td>
+								<td</td>
+							</tr>
+							<tr>
+								<td>E-mail</td>
+								<td>:</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Nomor Telepon</td>
+								<td>:</td>
+								<td></td>
 							</tr>
 						</tbody>
 

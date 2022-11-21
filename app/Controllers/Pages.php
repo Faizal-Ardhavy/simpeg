@@ -100,6 +100,13 @@ class Pages extends BaseController
         return view('pages/laporan');
     }
 
+	public function cetak(){
+        if (!$this->checkRole()) {
+            return redirect()->back();
+        }
+        return view('pages/laporan/cetak');
+    }
+
     public function login()
     {
         return view('pages/login');

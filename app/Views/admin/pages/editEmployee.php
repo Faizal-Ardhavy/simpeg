@@ -44,8 +44,8 @@
 						</div>
 						<div class="form-floating mb-3">
 							<select class="form-select ms-1" aria-label=".form-select-sm" name="role">
-								<option value="Pegawai" selected>Pegawai</option>
-								<option value="Administrator">Administrator</option>
+								<option value="pegawai" selected>Pegawai</option>
+								<option value="admin">Administrator</option>
 							</select>
 							<label for="role">Role</label>
 						</div>
