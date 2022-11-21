@@ -16,16 +16,16 @@
                 <div class="card-body">
                     <div class="form-floating mb-3">
                           <select class="form-select ms-1" aria-label=".form-select-sm" name="kelamin">
-                            <option value="CEO" selected>CEO</option>
-                            <option value="Programmer">Programmer</option>
-                            <option value="Administration">Administration</option>
+                            <option value="Laporan Kinerja" selected>Laporan Kinerja</option>
+                            <option value="Riwayat Gaji">Riwayat Gaji</option>
+                            <option value="Riwayat Presensi">Riwayat Presensi</option>
                           </select>
                           <label for="gender">Jenis Laporan</label>
                         </div> 
                         <div class="text-end">
                             <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> <?php //Tombol modal 
                                       ?>
-                                <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip"
+                                <i class="fas fa-pencil-alt ms-auto text-dark cursor-pointer" data-bs-toggle="tooltip"
                                     data-bs-placement="top" title="Cetak Laporan" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal"></i>
                             </a>
