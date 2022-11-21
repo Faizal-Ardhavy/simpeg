@@ -11,7 +11,7 @@
 	<title>
 		SIMPEG - Cetak
 	</title>
-	<!--     Fonts     -->
+	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 	<!-- CSS Files -->
@@ -38,7 +38,7 @@
 						</div>
 						<hr>
 					</header>
-					<h6 class="mt-5 text-uppercase"><b>Data Diri Pegawai</b></h6>
+					<h6 class="mt-5 text-uppercase fw-bold">Data Diri Pegawai</h6>
 					<table class="table table-borderless table-responsive">
 						<tbody>
 							<tr>
@@ -59,7 +59,7 @@
 							<tr>
 								<td>Alamat</td>
 								<td>:</td>
-								<td</td>
+								<td< /td>
 							</tr>
 							<tr>
 								<td>E-mail</td>
@@ -72,13 +72,15 @@
 								<td></td>
 							</tr>
 						</tbody>
-
 					</table>
-					<h6 class="mt-5 text-uppercase"><b>Rekapitulasi Pegawai</b></h6>
+					<h6 class="mt-5 text-uppercase fw-bold">Rekapitulasi Pegawai</h6>
+					<h4 class="text-uppercase">Presensi</h4>
 					<table class="table table-borderless table-responsive align-middle">
 						<thead>
 							<tr>
-
+								<th>No</th>
+								<th>Tanggal</th>
+								<th>Keterangan</th>
 							</tr>
 						</thead>
 						<tbody>
