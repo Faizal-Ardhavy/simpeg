@@ -104,7 +104,16 @@ class Pages extends BaseController
         if (!$this->checkRole()) {
             return redirect()->back();
         }
-        return view('pages/laporan/cetak');
+
+        $session = session();
+
+        $userModel = new PegawaiModel();
+        $data['profile'] = $userModel->where('username', $session->get('username'))->first();
+
+        $userModel = new PresensiModel();
+        $data['presensi'] = $userModel->where('user_presensi', $session->get('username'))->findAll();
+
+        return view('pages/laporan/cetak', $data);
     }
 
     public function login()

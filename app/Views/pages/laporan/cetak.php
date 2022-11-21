@@ -17,6 +17,22 @@
 	<!-- CSS Files -->
 	<link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
 	<link href="/assets/css/laporan.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			document.querySelector('#printButton').onclick = () => {
+
+				window.print();
+
+			}
+		});
+	</script>
+	<style>
+		@page {
+			size: auto;
+			margin: 0mm;
+		}
+	</style>
 </head>
 
 <body>
@@ -27,7 +43,7 @@
 					<header>
 						<div class="d-flex align-items-end flex-column">
 							<div class="">
-								<button class="btn btn-dark my-3" id="printButton" onClick="window.print();">
+								<button class="btn btn-dark my-3" id="printButton">
 									<i class="bi bi-printer"></i> Cetak</button>
 							</div>
 						</div>
@@ -38,57 +54,68 @@
 						</div>
 						<hr>
 					</header>
-					<h6 class="mt-5 text-uppercase fw-bold">Data Diri Pegawai</h6>
-					<table class="table table-borderless table-responsive">
-						<tbody>
-							<tr>
-								<td>Nama Lengkap</td>
-								<td>:</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>Tanggal Lahir</td>
-								<td>:</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>Jenis Kelamin</td>
-								<td>:</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>Alamat</td>
-								<td>:</td>
-								<td< /td>
-							</tr>
-							<tr>
-								<td>E-mail</td>
-								<td>:</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>Nomor Telepon</td>
-								<td>:</td>
-								<td></td>
-							</tr>
-						</tbody>
-					</table>
-					<h6 class="mt-5 text-uppercase fw-bold">Rekapitulasi Pegawai</h6>
-					<h4 class="text-uppercase">Presensi</h4>
-					<table class="table table-borderless table-responsive align-middle">
-						<thead>
-							<tr>
-								<th>No</th>
-								<th>Tanggal</th>
-								<th>Keterangan</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
+					<div id="print">
+						<h6 class="mt-5 text-uppercase fw-bold">Data Diri Pegawai</h6>
+						<table class="table table-borderless table-responsive">
+							<tbody>
+								<tr>
+									<td>Nama Lengkap</td>
+									<td>:</td>
+									<td><?= $profile->name; ?></td>
+								</tr>
+								<tr>
+									<td>Tanggal Lahir</td>
+									<td>:</td>
+									<td><?= $profile->tgl_lahir; ?></td>
+								</tr>
+								<tr>
+									<td>Jenis Kelamin</td>
+									<td>:</td>
+									<td><?= $profile->kelamin; ?></td>
+								</tr>
+								<tr>
+									<td>Alamat</td>
+									<td>:</td>
+									<td><?= $profile->alamat; ?></td>
+								</tr>
+								<tr>
+									<td>E-mail</td>
+									<td>:</td>
+									<td><?= $profile->email; ?></td>
+								</tr>
+								<tr>
+									<td>Nomor Telepon</td>
+									<td>:</td>
+									<td><?= $profile->no_telp; ?></td>
+								</tr>
+							</tbody>
+						</table>
+						<h6 class="mt-5 text-uppercase fw-bold">Rekapitulasi Pegawai</h6>
+						<h4 class="text-uppercase">Presensi</h4>
+						<table class="table table-borderless table-responsive align-middle">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Tanggal</th>
+									<th>Keterangan</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php
+								$no = 0;
+								foreach ($presensi as $dt) {
+								?>
 
-							</tr>
-						</tbody>
-					</table>
+									<tr>
+										<td><?= $no++; ?></td>
+										<td><?= $dt->tanggal; ?></td>
+										<td><?= $dt->keterangan; ?></td>
+									</tr>
+
+								<?php } ?>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
