@@ -13,7 +13,6 @@ class AdminPages extends BaseController
 	{
 		$session = session();
 		if ($session->role != 'admin') {
-			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
 		$name['name'] = $session->get('pegawai_name');
