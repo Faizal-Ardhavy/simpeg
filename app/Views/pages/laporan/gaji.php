@@ -46,7 +46,7 @@
 								<i class="bi bi-printer"></i> Cetak
 							</button>
 						</div>
-						<h4 class="text-center text-uppercase fw-bold">Laporan Gaji</h4>
+						<h4 class="mt-5 text-center text-uppercase fw-bold">Laporan Gaji</h4>
 						<hr>
 					</header>
 					<div id="print">
