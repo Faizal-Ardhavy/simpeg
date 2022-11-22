@@ -40,6 +40,7 @@
 								<i class="bi bi-printer"></i> Cetak
 							</button>
 						</div>
+						<h4 class="text-center text-uppercase fw-bold">Laporan Presensi</h4>
 						<hr>
 					</header>
 					<div id="print">
@@ -101,6 +102,13 @@
 								<?php } ?>
 							</tbody>
 						</table>
+
+						<div class="text-end">
+							<?php
+								date_default_timezone_set('Asia/Jakarta');
+								echo 'Dibuat pada ' . date('d-m-Y h:i:sa');
+							?>
+						</div>
 					</div>
 				</div>
 			</div>
