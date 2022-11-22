@@ -111,9 +111,14 @@ class Pages extends BaseController
         $data['profile'] = $userModel->where('username', $session->get('username'))->first();
 
         $userModel = new PresensiModel();
-        $data['presensi'] = $userModel->where('user_presensi', $session->get('username'))->findAll();
+        for($i = 1; $i<=12; $i++) {
+            $presensi[$i] = $userModel->where('user_presensi', $session->get('username'))->where('YEAR(tanggal)', date('2022'))->where('MONTH(tanggal)', date($i))->findAll();
+        }
 
-        return view('pages/laporan/presensi', $data);
+        $data['presensi'] = $presensi;
+
+        dd($data);
+        // return view('pages/laporan/presensi', $data);
     }
 
 	public function laporanGaji(){
