@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 ?>
 
@@ -29,6 +29,12 @@
 			}
 		});
 	</script>
+	<style>
+		@page {
+			size: auto;
+			margin: 0mm;
+		}
+	</style>
 </head>
 
 <body>
@@ -98,9 +104,9 @@
 									<tr>
 										<td scope="row"><?= ++$no; ?></td>
 										<td><?php
-									$m = DateTime::createFromFormat('!m', $no);
-									echo $m->format('F');
-									?></td>
+											$m = DateTime::createFromFormat('!m', $no);
+											echo $m->format('F');
+											?></td>
 										<td class="text-capitalize"><?= $dt ?></td>
 									</tr>
 
@@ -110,8 +116,8 @@
 
 						<div class="text-end">
 							<?php
-								date_default_timezone_set('Asia/Jakarta');
-								echo 'Dibuat pada ' . date('d-m-Y h:i:sa');
+							date_default_timezone_set('Asia/Jakarta');
+							echo 'Dibuat pada ' . date('d-m-Y h:i:sa');
 							?>
 						</div>
 					</div>
