@@ -59,7 +59,7 @@
 										<div class="col-md-4 text-end">
 											<a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> <?php //Tombol modal 
 																																?>
-												<i class="fas fa-pencil-alt ms-auto text-dark cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card"></i>
+												<i class="fas fa-pencil-alt ms-auto cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card"></i>
 											</a>
 										</div>
 									</div>

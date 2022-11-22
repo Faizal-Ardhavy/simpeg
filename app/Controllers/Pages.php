@@ -100,7 +100,7 @@ class Pages extends BaseController
         return view('pages/laporan');
     }
 
-	public function cetak(){
+	public function laporanPresensi(){
         if (!$this->checkRole()) {
             return redirect()->back();
         }
@@ -113,7 +113,23 @@ class Pages extends BaseController
         $userModel = new PresensiModel();
         $data['presensi'] = $userModel->where('user_presensi', $session->get('username'))->findAll();
 
-        return view('pages/laporan/cetak', $data);
+        return view('pages/laporan/presensi', $data);
+    }
+
+	public function laporanGaji(){
+        if (!$this->checkRole()) {
+            return redirect()->back();
+        }
+
+        $session = session();
+
+        $userModel = new PegawaiModel();
+        $data['profile'] = $userModel->where('username', $session->get('username'))->first();
+
+        $userModel = new PresensiModel();
+        $data['presensi'] = $userModel->where('user_presensi', $session->get('username'))->findAll();
+
+        return view('pages/laporan/gaji', $data);
     }
 
     public function login()

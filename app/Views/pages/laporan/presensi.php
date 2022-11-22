@@ -27,12 +27,6 @@
 			}
 		});
 	</script>
-	<style>
-		@page {
-			size: auto;
-			margin: 0mm;
-		}
-	</style>
 </head>
 
 <body>
@@ -42,15 +36,9 @@
 				<div class="rounded h-100">
 					<header>
 						<div class="d-flex align-items-end flex-column">
-							<div class="">
-								<button class="btn btn-dark my-3" id="printButton">
-									<i class="bi bi-printer"></i> Cetak</button>
-							</div>
-						</div>
-						<div class="d-flex justify-content-between">
-							<div class="text-center">
-
-							</div>
+							<button class="btn btn-primary my-3" id="printButton">
+								<i class="bi bi-printer"></i> Cetak
+							</button>
 						</div>
 						<hr>
 					</header>
@@ -59,45 +47,44 @@
 						<table class="table table-borderless table-responsive">
 							<tbody>
 								<tr>
-									<td>Nama Lengkap</td>
-									<td>:</td>
+									<td scope="row">Nama Lengkap</td>
+									<td width="1%">:</td>
 									<td><?= $profile->name; ?></td>
 								</tr>
 								<tr>
-									<td>Tanggal Lahir</td>
-									<td>:</td>
+									<td scope="row">Tanggal Lahir</td>
+									<td width="1%">:</td>
 									<td><?= $profile->tgl_lahir; ?></td>
 								</tr>
 								<tr>
-									<td>Jenis Kelamin</td>
-									<td>:</td>
+									<td scope="row">Jenis Kelamin</td>
+									<td width="1%">:</td>
 									<td><?= $profile->kelamin; ?></td>
 								</tr>
 								<tr>
-									<td>Alamat</td>
-									<td>:</td>
+									<td scope="row">Alamat</td>
+									<td width="1%">:</td>
 									<td><?= $profile->alamat; ?></td>
 								</tr>
 								<tr>
-									<td>E-mail</td>
-									<td>:</td>
+									<td scope="row">E-mail</td>
+									<td width="1%">:</td>
 									<td><?= $profile->email; ?></td>
 								</tr>
 								<tr>
-									<td>Nomor Telepon</td>
-									<td>:</td>
+									<td scope="row">Nomor Telepon</td>
+									<td width="1%">:</td>
 									<td><?= $profile->no_telp; ?></td>
 								</tr>
 							</tbody>
 						</table>
-						<h6 class="mt-5 text-uppercase fw-bold">Rekapitulasi Pegawai</h6>
-						<h4 class="text-uppercase">Presensi</h4>
+						<h6 class="mt-5 text-uppercase fw-bold">Riwayat Presensi Pegawai</h6>
 						<table class="table table-borderless table-responsive align-middle">
 							<thead>
 								<tr>
-									<th>No</th>
-									<th>Tanggal</th>
-									<th>Keterangan</th>
+									<th scope="col" width="1%">No</th>
+									<th scope="col">Bulan</th>
+									<th scope="col">Jumlah Kehadiran</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -105,11 +92,10 @@
 								$no = 0;
 								foreach ($presensi as $dt) {
 								?>
-
 									<tr>
-										<td><?= $no++; ?></td>
+										<td scope="row"><?= ++$no; ?></td>
 										<td><?= $dt->tanggal; ?></td>
-										<td><?= $dt->keterangan; ?></td>
+										<td class="text-capitalize"><?= $dt->keterangan; ?></td>
 									</tr>
 
 								<?php } ?>

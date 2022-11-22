@@ -13,11 +13,11 @@
                             <h5 class="font-weight-bolder">Portal Pegawai!</h5>
                             <p class="mb-5">Sistem Informasi Kepegawaian
                             </p>
-                            <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
+                            <!-- <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
                                 href="javascript:;">
                                 Read More
                                 <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                     <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
@@ -36,7 +36,7 @@
     </div>
 </div>
 
-<div class="container-fluid py-0">
+<!-- <div class="container-fluid py-0">
     <div class="row">
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
             <div class="card">
@@ -61,6 +61,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <?= $this->endSection() ?>

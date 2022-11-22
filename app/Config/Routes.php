@@ -53,7 +53,7 @@ $routes->get('pegawaiDashboard', 'Pages::dashboard');
 $routes->get('profile', 'Pages::profile');
 $routes->get('payroll', 'Pages::payroll');
 $routes->get('laporan', 'Pages::laporan');
-$routes->get('laporan/cetak', 'Pages::cetak');
+$routes->get('laporan/presensi', 'Pages::laporanPresensi');
 $routes->get('presensi', 'Pages::presensi');
 $routes->get('login', 'Login::index');
 $routes->post('login/process', 'Login::process');

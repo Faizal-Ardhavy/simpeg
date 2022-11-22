@@ -14,19 +14,15 @@
 					</div>
 				</div>
 				<div class="card-body">
-					<form action="laporan/cetak">
-						<div class="form-floating mb-3">
-							<select class="form-select ms-1" aria-label=".form-select-sm" name="laporan">
-								<option value="Laporan Kinerja" selected>Laporan Kinerja</option>
-								<option value="Riwayat Gaji">Riwayat Gaji</option>
-								<option value="Riwayat Presensi">Riwayat Presensi</option>
-							</select>
-							<label for="gender">Jenis Laporan</label>
-						</div>
-						<div class="text-end">
-							<input class="btn btn-primary" type="submit">
-						</div>
-					</form>
+					<div class="form-floating mb-3">
+						<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" class="form-select ms-1" aria-label=".form-select-sm" name="laporan">
+							<option value="">Pilih jenis laporan</option>
+							<option value="laporan/presensi">Riwayat Presensi</option>
+							<option value="laporan/gaji">Riwayat Gaji</option>
+							<!-- <option value="laporan/kinerja">Laporan Kinerja</option> -->
+						</select>
+						<label for="laporan">Jenis Laporan</label>
+					</div>
 				</div>
 			</div>
 		</div>
