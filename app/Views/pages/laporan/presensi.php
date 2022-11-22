@@ -1,4 +1,6 @@
-<?php ?>
+<?php 
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -95,8 +97,11 @@
 								?>
 									<tr>
 										<td scope="row"><?= ++$no; ?></td>
-										<td><?= $dt->tanggal; ?></td>
-										<td class="text-capitalize"><?= $dt->keterangan; ?></td>
+										<td><?php
+									$m = DateTime::createFromFormat('!m', $no);
+									echo $m->format('F');
+									?></td>
+										<td class="text-capitalize"><?= $dt ?></td>
 									</tr>
 
 								<?php } ?>
