@@ -28,3 +28,72 @@
 		});
 	</script>
 </head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row g-4">
+			<div class="col">
+				<div class="rounded h-100">
+					<header>
+						<div class="d-flex align-items-end flex-column">
+							<button class="btn btn-primary my-3" id="printButton">
+								<i class="bi bi-printer"></i> Cetak
+							</button>
+						</div>
+						<h4 class="text-center text-uppercase fw-bold">Laporan Gaji</h4>
+						<hr>
+					</header>
+					<div id="print">
+						<h6 class="mt-5 text-uppercase fw-bold">Data Diri Pegawai</h6>
+						<table class="table table-borderless table-responsive">
+							<tbody>
+								<tr>
+									<td scope="row">Nama Lengkap</td>
+									<td width="1%">:</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td scope="row">Jabatan</td>
+									<td width="1%">:</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td scope="row">Gaji</td>
+									<td width="1%">:</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td scope="row">Rekening</td>
+									<td width="1%">:</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						<h6 class="mt-5 text-uppercase fw-bold">Riwayat Gaji Pegawai</h6>
+						<table class="table table-borderless table-responsive align-middle">
+							<thead>
+								<tr>
+									<th scope="col" width="1%">No</th>
+									<th scope="col">Bulan</th>
+									<th scope="col">Jumlah Gaji</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="text-end">
+							<?php
+								date_default_timezone_set('Asia/Jakarta');
+								echo 'Dibuat pada ' . date('d-m-Y h:i:sa');
+							?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

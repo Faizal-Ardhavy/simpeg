@@ -54,6 +54,7 @@ $routes->get('profile', 'Pages::profile');
 $routes->get('payroll', 'Pages::payroll');
 $routes->get('laporan', 'Pages::laporan');
 $routes->get('laporan/presensi', 'Pages::laporanPresensi');
+$routes->get('laporan/gaji', 'Pages::laporanGaji');
 $routes->get('presensi', 'Pages::presensi');
 $routes->get('login', 'Login::index');
 $routes->post('login/process', 'Login::process');
