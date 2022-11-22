@@ -138,9 +138,6 @@ class Pages extends BaseController
         $userModel = new PegawaiModel();
         $data['profile'] = $userModel->where('username', $session->get('username'))->first();
 
-        $userModel = new PresensiModel();
-        $data['presensi'] = $userModel->where('user_presensi', $session->get('username'))->findAll();
-
         return view('pages/laporan/gaji', $data);
     }
 

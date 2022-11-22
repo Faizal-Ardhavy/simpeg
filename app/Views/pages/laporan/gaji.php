@@ -27,6 +27,12 @@
 			}
 		});
 	</script>
+	<style>
+		@page {
+			size: auto;
+			margin: 0mm;
+		}
+	</style>
 </head>
 
 <body>
@@ -50,22 +56,22 @@
 								<tr>
 									<td scope="row">Nama Lengkap</td>
 									<td width="1%">:</td>
-									<td></td>
+									<td><?= $profile->name; ?></td>
 								</tr>
 								<tr>
 									<td scope="row">Jabatan</td>
 									<td width="1%">:</td>
-									<td></td>
+									<td><?= $profile->jabatan; ?></td>
 								</tr>
 								<tr>
 									<td scope="row">Gaji</td>
 									<td width="1%">:</td>
-									<td></td>
+									<td><?= $profile->gaji; ?></td>
 								</tr>
 								<tr>
 									<td scope="row">Rekening</td>
 									<td width="1%">:</td>
-									<td></td>
+									<td><?= $profile->rekening; ?> (<?= $profile->bank; ?>)</td>
 								</tr>
 							</tbody>
 						</table>
@@ -87,8 +93,8 @@
 
 						<div class="text-end">
 							<?php
-								date_default_timezone_set('Asia/Jakarta');
-								echo 'Dibuat pada ' . date('d-m-Y h:i:sa');
+							date_default_timezone_set('Asia/Jakarta');
+							echo 'Dibuat pada ' . date('d-m-Y h:i:sa');
 							?>
 						</div>
 					</div>
