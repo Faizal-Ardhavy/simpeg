@@ -16,14 +16,14 @@
 				</div>
 				<div class="card-body">
 					<div class="form-floating mb-3">
-						<select class="form-select ms-1" aria-label=".form-select-sm" id="laporan">
+						<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" class="form-select ms-1" aria-label=".form-select-sm" name="laporan">
 							<option value="">Pilih jenis laporan</option>
-							<option value="admin/laporan/presensi">Laporan Rekapitulasi Presensi Pegawai</option>
-							<option value="admin/laporan/gaji">Laporan Rekapitulasi Gaji Pegawai</option>
+							<option value="adminLaporan/presensi">Laporan Rekapitulasi Presensi Pegawai</option>
+							<option value="adminLaporan/gaji">Laporan Rekapitulasi Gaji Pegawai</option>
 						</select>
 						<label for="laporan">Jenis Laporan</label>
 					</div>
-				</div>
+				</div>	
 			</div>
 		</div>
 
