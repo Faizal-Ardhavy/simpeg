@@ -58,7 +58,7 @@
 								<tr>
 									<td scope="row">Jumlah Pegawai Aktif</td>
 									<td width="1%">:</td>
-									<td></td>
+									<td><?=$total?></td>
 								</tr>
 							</tbody>
 						</table>
@@ -74,14 +74,18 @@
 							<tbody>
 								<?php
 								$no = 0;
-
+								foreach ($presensi as $dt) {
 								?>
 									<tr>
 										<td scope="row"><?= ++$no; ?></td>
-										<td></td>
-										<td></td>
+										<td><?php
+											$m = DateTime::createFromFormat('!m', $no);
+											echo $m->format('F');
+											?></td>
+										<td class="text-capitalize"><?= $dt ?></td>
 									</tr>
 
+								<?php } ?>
 							</tbody>
 						</table>
 
