@@ -35,6 +35,7 @@
         </div>
     </div>
     </div>
+
 <div class="container-fluid py-1">
     <div class="col-lg-5 mb-lg-0 mb-4">
           <div class="card z-index-2">
@@ -44,8 +45,7 @@
                   <canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
                 </div>
               </div>
-              <h6 class="ms-2 mt-4 mb-0">Rekapitulasi Absensi Pegawai</h6>
-              <p class="text-sm ms-2"> (<span class="font-weight-bolder">+23%</span>) dari minggu kemarin </p>
+              <h6 class="ms-2 mt-4 mb-0">Rekapitulasi Presensi Pegawai</h6>
               <div class="container border-radius-lg">
                 <div class="row">
                   <div class="col-10 py-3 ps-0">
@@ -67,7 +67,7 @@
                       </div>
                       <p class="text-xs mt-1 mb-0 font-weight-bold">Jumlah Pegawai Keseluruhan</p>
                     </div>
-                    <p class="font-weight-bolder">455 orang</p>
+                    <p class="font-weight-bolder">3 orang</p>
                   </div>
               </div>
             </div>
