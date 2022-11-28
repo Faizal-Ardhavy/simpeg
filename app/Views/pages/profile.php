@@ -19,7 +19,7 @@
                         <?= $data->name; ?>
                     </h5>
                     <p class="mb-0 font-weight-bold text-sm">
-                        CEO / Co-Founder
+                    <?= $jabatan->jabatan; ?>
                     </p>
                 </div>
             </div>
