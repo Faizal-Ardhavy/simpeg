@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Models\PegawaiModel;
 use App\Models\PresensiModel;
+use App\Models\JabatanModel;
+
 
 class Pages extends BaseController
 {
@@ -62,10 +64,13 @@ class Pages extends BaseController
         }
         $session = session();
         $userModel = new PegawaiModel();
+        $jabatan = new JabatanModel();
 
-        $data['data'] = $userModel->where('username', $session->get('username'))->first();
-
-        return view('pages/payroll', $data);
+        $dataAll['dataAll'] = [
+            $dataUser=$userModel->where('username', $session->get('username'))->first(),
+            $dataJabatan=$jabatan->where('user', $session->get('username'))->first()
+        ];
+        return view('pages/payroll', $dataAll);
     }
 
     public function paymentMethod()
@@ -135,10 +140,30 @@ class Pages extends BaseController
 
         $session = session();
 
+        $session = session();
         $userModel = new PegawaiModel();
-        $data['profile'] = $userModel->where('username', $session->get('username'))->first();
+        $jabatan = new JabatanModel();
+        for($i = 1; $i<=12; $i++) {
+            $c = 0;
+            $temp = $jabatan->where('user', $session->get('username'))->where('YEAR(histori)', date('2022'))->where('MONTH(histori)', date($i))->findAll();
+            foreach($temp as $t){
+                if($t->gaji !== null){
+                    $c++;
+                }
+            }
+            $presensi[$i] = $c;
+        }
 
-        return view('pages/laporan/gaji', $data);
+        $data['presensi'] = $presensi;
+        $dataAll['dataAll'] = [
+            $dataUser=$userModel->where('username', $session->get('username'))->first(),
+            $dataJabatan=$jabatan->where('user', $session->get('username'))->first(),
+            $presensi,
+        ];
+        // if($dataAll["dataAll"][2][11]>0){
+        //     echo "saya benar";
+        // }
+        return view('pages/laporan/gaji', $dataAll);
     }
 
     public function login()
@@ -182,3 +207,5 @@ class Pages extends BaseController
         return view('pages/register');
     }
 }
+
+

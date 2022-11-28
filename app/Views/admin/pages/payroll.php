@@ -23,12 +23,14 @@
 							<th></th>
 						</tr>
 						<?php $count = 0 ?>
-						<?php foreach ($employee as $dt) { ?>
+						<?php $no = 0?>
+						<?php foreach ($dataAll[1] as $dt) { ?>
+							
 						<tr>
 							<td><?= ++$count; ?></td>
 							<td><?= $dt->name; ?></td>
-							<td><?= $dt->jabatan; ?></td>
-							<td><?= $dt->gaji; ?></td>
+							<td><?= $dataAll[2][$no]->jabatan ?></td>
+							<td><?= $dataAll[2][$no]->gaji ?></td>
 							<td>
 								<div class="row row-cols-auto">
 									<a class="" type="button" href="AdminEditPayroll/<?= $dt->username; ?>">
@@ -37,6 +39,7 @@
 								</div>
 							</td>
 						</tr>
+						<?php $no++?>
 						<?php } ?>
 					</table>
 				</div>
