@@ -166,12 +166,48 @@ class AdminPages extends BaseController
 		$data['data'] = $id;
 		return view('admin/pages/editPayroll', $data);
 	}
-	public function report(){
+	public function laporan(){
 		$session  = session();
 		if ($session->role != 'admin') {
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
 		return view('admin/pages/laporan');
+	}
+	public function laporanPresensi(){
+		$session  = session();
+		if ($session->role != 'admin') {
+			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
+			return redirect()->back();
+		}
+
+		$userModel = new PegawaiModel();
+		$data['total'] = $userModel->countAllResults();
+
+		$userModel = new PresensiModel();
+		for ($i = 1; $i <= 12; $i++) {
+			$c = 0;
+			$temp = $userModel->where('YEAR(tanggal)', date('2022'))->where('MONTH(tanggal)', date($i))->findAll();
+			foreach ($temp as $t) {
+				if ($t->keterangan == 'hadir') {
+					$c++;
+				}
+			}
+			$presensi[$i] = $c;
+		}
+
+		$data['presensi'] = $presensi;
+
+		// dd($data);
+		return view('admin/pages/laporan/presensi', $data);
+	}
+
+	public function laporanGaji(){
+		$session  = session();
+		if ($session->role != 'admin') {
+			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
+			return redirect()->back();
+		}
+		return view('admin/pages/laporan/gaji');
 	}
 }
