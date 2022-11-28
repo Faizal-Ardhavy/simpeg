@@ -20,7 +20,6 @@ class AdminPages extends BaseController
 		$q = $db->query("select year(created_at) as yyyy,
        count(username) as jumlah
 from pegawai
-WHERE role = 'pegawai'
 group by year(created_at)
 order by yyyy");
 		$year = array();
@@ -37,10 +36,10 @@ order by yyyy");
 			$peningkatan = $jumlah[$l - 1] - $jumlah[$l - 2];
 		}
 
-		$data['year'] = $jumlah;
-		$data['jumlah'] = $year;
+		$data['year'] = $year;
+		$data['jumlah'] = $jumlah;
 		$data['peningkatan'] = $peningkatan;
-		$data['jumlah_pegawai'] = count($year);
+		$data['jumlah_pegawai'] = array_sum($jumlah);
 		$data['name'] = $session->get('pegawai_name');
 		return view('admin/pages/dashboard', $data);
 	}
