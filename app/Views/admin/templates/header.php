@@ -24,6 +24,9 @@
 	<!-- CSS Files -->
 	<link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
 	<link href="/assets/css/style.css" rel="stylesheet" />
+
+	<!-- Chart JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
