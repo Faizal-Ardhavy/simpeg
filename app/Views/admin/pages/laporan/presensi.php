@@ -50,7 +50,7 @@
 						<div class="mt-2 sidenav-header">
 							<a class="navbar-brand m-0">
 								<img src="/assets/img/logo-ct.png" class="navbar-brand-img h-50" alt="main_logo">
-								<span class="ms-1 font-weight-bold bg-dark text-gradient">Portal Pegawai</span>
+								<span class="ms-1 font-weight-bold bg-dark text-gradient">Portal Administrator</span>
 							</a>
 						</div>
 						<div class="title fw-bold">

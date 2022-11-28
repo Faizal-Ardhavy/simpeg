@@ -18,7 +18,7 @@
                     <h5 class="mb-1 text-capitalize">
                         <?= $data->name; ?>
                     </h5>
-                    <p class="mb-0 font-weight-bold text-sm">
+                    <p class="mb-0 font-weight-bold text-sm text-uppercase">
                     <?= $jabatan->jabatan; ?>
                     </p>
                 </div>
@@ -36,9 +36,8 @@
                             <h6 class="mb-0 mx-2">Profil Pegawai</h6>
                         </div>
                         <div class="col-md-4 text-end">
-                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> <?php //Tombol modal 
-                                      ?>
-                                <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip"
+                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fas fa-user-edit text-sm" data-bs-toggle="tooltip"
                                     data-bs-placement="top" title="Edit Profile" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal"></i>
                             </a>
