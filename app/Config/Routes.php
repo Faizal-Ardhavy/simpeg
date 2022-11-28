@@ -40,7 +40,7 @@ $routes->set404Override();
 $routes->get('adminDashboard', 'AdminPages::dashboard');
 $routes->get('adminLaporan', 'AdminPages::laporan');
 $routes->get('adminLaporan/presensi', 'AdminPages::laporanPresensi');
-$routes->get('adminLaporan/gaji', 'AdminPages::laporanGaji');
+$routes->get('adminLaporan/jabatan', 'AdminPages::laporanJabatan');
 $routes->get('AdminEmployee', 'AdminPages::employee');
 $routes->get('AdminEditEmployee/(:any)', 'AdminPages::editEmployee/$1');
 $routes->get('AdminDeleteEmployee/(:any)', 'AdminPages::deleteEmployee/$1');
