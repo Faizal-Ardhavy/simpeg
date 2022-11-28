@@ -19,7 +19,7 @@
 						<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" class="form-select ms-1" aria-label=".form-select-sm" name="laporan">
 							<option value="">Pilih jenis laporan</option>
 							<option value="adminLaporan/presensi">Laporan Rekapitulasi Presensi Pegawai</option>
-							<option value="adminLaporan/gaji">Laporan Rekapitulasi Jabatan Pegawai</option>
+							<option value="adminLaporan/jabatan">Laporan Rekapitulasi Jabatan Pegawai</option>
 						</select>
 						<label for="laporan">Jenis Laporan</label>
 					</div>

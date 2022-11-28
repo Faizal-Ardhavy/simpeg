@@ -248,12 +248,12 @@ order by yyyy");
 		return view('admin/pages/laporan/presensi', $data);
 	}
 
-	public function laporanGaji(){
+	public function laporanJabatan(){
 		$session  = session();
 		if ($session->role != 'admin') {
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
-		return view('admin/pages/laporan/gaji');
+		return view('admin/pages/laporan/jabatan');
 	}
 }
