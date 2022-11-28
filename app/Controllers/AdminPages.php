@@ -93,9 +93,10 @@ order by yyyy");
 			return redirect()->back();
 		}
 		$userModel = new PegawaiModel();
-		$user = $userModel->where([
-			'username' => $this->request->getPost('id'),
-		])->delete();
+		// $user = $userModel->where([
+		// 	'username' => $this->request->getPost('id'),
+		// ])->delete();
+		$userModel->delete($id);
 		return redirect()->to(previous_url());
 	}
 
@@ -165,7 +166,15 @@ order by yyyy");
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
-		$data['data'] = $id;
+		// $data['data'] = $id;
+		$userModel = new PegawaiModel();
+		$data['name'] = $session->get('username');
+		// $data['employee'] = $userModel->where('username',$data['name'])->find();
+		$data = [
+			'data' => $id,
+			'employee' => $userModel->where('username',$id)->get()->getRowArray(),
+		];
+		// dd($data);
 		return view('admin/pages/editEmployee', $data);
 		// dd($data);
 	}
@@ -179,6 +188,12 @@ order by yyyy");
 		}
 
 		$data['data'] = $id;
+		$jab = new JabatanModel();
+		$userModel = new PegawaiModel();
+		$data=[
+			'data' => $id,
+			'jabatan'=> $jab->where('user',$id)->get()->getRowArray(),
+		];
 		return view('admin/pages/editPayroll', $data);
 	}
 	public function laporan(){

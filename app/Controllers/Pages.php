@@ -51,8 +51,10 @@ class Pages extends BaseController
         }
         $session = session();
         $userModel = new PegawaiModel();
+        $jabatanModell = new JabatanModel();
 
         $data['data'] = $userModel->where('username', $session->get('username'))->first();
+        $data['jabatan'] = $jabatanModell->where('user', $session->get('username'))->first();
 
         return view('pages/profile', $data);
     }
