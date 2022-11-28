@@ -1,8 +1,42 @@
+body{
+	margin: 0 10em;
+}
+
+.title{
+	margin-bottom: 1.5rem;
+}
+
+.text-title{
+	font-size: 1.75rem;
+}
+
 .table thead th {
 	padding: 0.75rem !important;
+	font-size: .85em !important;
+}
+
+.table>tbody>tr>td {
+	font-size: .85em !important;
+}
+
+.badge{
+	font-size: 0.9rem !important;
+}
+
+.timestamp{
+	font-size: 0.75rem;
+	color: var(--bs-gray) !important;
 }
 
 @media print {
+	body{
+		margin: 0 4em;
+	}
+
+	.text-title{
+		font-size: 1.5rem;
+	}
+	
 	#printButton {
 		display: none;
 	}
