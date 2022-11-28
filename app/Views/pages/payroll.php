@@ -16,7 +16,7 @@
 								</div>
 								<div class="card-body pt-0 p-3 text-center">
 									<h6 class="text-center mb-0">Gaji</h6>
-									<span class="text-xs">per Oktober 2022</span>
+									<span class="text-xs"><?= date('F Y', strtotime('m')); ?></span>
 									<hr class="horizontal dark my-3">
 									<h5 class="mb-0">Rp <?= $dataAll[1]->gaji ?></h5>
 								</div>
