@@ -16,45 +16,45 @@
 					<hr class="horizontal gray-light" style="margin: 0.5rem 0 !important;">
 					<form action='updateProfile' method="POST">
 						<div class="form-floating mb-3">
-							<input type="text" class="form-control ms-1" id="name" name="name" value="<?=$employee['name']?>">
+							<input type="text" class="form-control ms-1" id="name" name="name" value="<?= $employee['name'] ?>">
 							<label for="name">Nama</label>
 						</div>
 						<div class="form-floating mb-3">
-							<input type="date" class="form-control ms-1" id="date" name="date" value="<?=$employee['tgl_lahir']?>">
+							<input type="date" class="form-control ms-1" id="date" name="date" value="<?= $employee['tgl_lahir'] ?>">
 							<label for="date">Tanggal Lahir</label>
 						</div>
 						<div class="form-floating mb-3">
 							<select class="form-select ms-1" aria-label=".form-select-sm" name="kelamin">
-							<?php if($employee['kelamin']=="Laki-laki"):?>
-								<option selected value="Laki-laki">Laki-laki</option>
-								<option value="Perempuan">Perempuan</option>
-							<?php else: ?>
-								<option selected value="Perempuan">Perempuan</option>
-								<option value="Laki-laki">Laki-laki</option>
-							<?php endif; ?>
+								<?php if ($employee['kelamin'] == "Laki-laki") : ?>
+									<option selected value="Laki-laki">Laki-laki</option>
+									<option value="Perempuan">Perempuan</option>
+								<?php else : ?>
+									<option selected value="Perempuan">Perempuan</option>
+									<option value="Laki-laki">Laki-laki</option>
+								<?php endif; ?>
 							</select>
 							<label for="gender">Jenis Kelamin</label>
 						</div>
 						<div class="form-floating mb-3">
-							<textarea class="form-control ms-1" id="address" name="address"><?=$employee['alamat']?></textarea>
+							<textarea class="form-control ms-1" id="address" name="address"><?= $employee['alamat'] ?></textarea>
 							<label for="address">Alamat</label>
 						</div>
 						<div class="form-floating mb-3">
-							<input type="email" class="form-control ms-1" id="email" name="email" value="<?=$employee['email']?>">
+							<input type="email" class="form-control ms-1" id="email" name="email" value="<?= $employee['email'] ?>">
 							<label for="email">E-mail</label>
 						</div>
 						<div class="form-floating mb-3">
-							<input type="text" class="form-control ms-1" id="phone" name="phone" value="<?=$employee['no_telp']?>">
+							<input type="text" class="form-control ms-1" id="phone" name="phone" value="<?= $employee['no_telp'] ?>">
 							<label for="phone">Nomor Telepon</label>
 						</div>
 						<div class="form-floating mb-3">
-							<select class="form-select ms-1" aria-label=".form-select-sm" name="role" >
+							<select class="form-select ms-1" aria-label=".form-select-sm" name="role">
 								<!-- <option value="pegawai" selected>Pegawai</option>
 								<option value="admin">Administrator</option> -->
-								<?php if($employee['role']=="admin"):?>
+								<?php if ($employee['role'] == "admin") : ?>
 									<option selected value="admin">admin</option>
 									<option value="pegawai">pegawai</option>
-								<?php else: ?>
+								<?php else : ?>
 									<option selected value="pegawai">pegawai</option>
 									<option value="admin">admin</option>
 								<?php endif; ?>
@@ -63,7 +63,7 @@
 						</div>
 						<div class="modal-footer">
 							<input type="hidden" class="form-control ms-1" name="id" value="<?= $data ?>">
-							<button type="button" class="btn btn-secondary">Close</button>
+							<a href="javascript:history.back()" class="btn btn-secondary">Close</a>
 							<button type="submit" class="btn btn-primary">Save</button>
 						</div>
 					</form>

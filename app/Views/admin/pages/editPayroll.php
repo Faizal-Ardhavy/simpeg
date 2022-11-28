@@ -31,7 +31,7 @@
 							<label for="gaji">Gaji</label>
 						</div>
 						<div class="modal-footer">
-							<a type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
+							<a href="javascript:history.back()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
 							<button type="submit" class="btn btn-primary">Save</button>
 						</div>
 					</form>

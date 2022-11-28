@@ -35,7 +35,7 @@
 		<div class="sidenav-header">
 			<i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
 				aria-hidden="true" id="iconSidenav"></i>
-			<a class="navbar-brand m-0" href="adminDashboard">
+			<a class="navbar-brand m-0" href="/adminDashboard">
 				<img src="/assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
 				<span class="ms-1 font-weight-bold">Portal Admin</span>
 			</a>
@@ -44,7 +44,7 @@
 		<div class="collapse navbar-collapse  w-auto  max-height-vh-100 h-100" id="sidenav-collapse-main">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="adminDashboard">
+					<a class="nav-link" href="/adminDashboard">
 						<div
 							class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
 							<svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1"
@@ -71,7 +71,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="AdminEmployee">
+					<a class="nav-link" href="/AdminEmployee">
 						<div
 							class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
 							<svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
@@ -98,7 +98,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="AdminPayroll">
+					<a class="nav-link" href="/AdminPayroll">
 						<div
 							class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
 							<svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
@@ -125,7 +125,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="AdminPresensi">
+					<a class="nav-link" href="/AdminPresensi">
 						<div
 							class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
 							<svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1"
@@ -155,7 +155,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link  " href="adminLaporan">
+					<a class="nav-link  " href="/adminLaporan">
 						<div
 							class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
 							<svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1"
