@@ -25,7 +25,13 @@ class Login extends BaseController
                         'role' => $dataUser->role,
                         'logged_in' => true,
                     ]);
-                    return redirect()->to(base_url('Dashboard'));
+                    if(session()->role == "admin"){
+                        return redirect()->to(base_url('adminDashboard'));
+                    }else{
+                        return redirect()->to(base_url('Dashboard'));
+
+                    }
+
             } else {
                 session()->setFlashdata('error', 'Username & Password Salah');
                 return redirect()->back();
