@@ -29,8 +29,24 @@ order by yyyy");
 			array_push($jumlah, (int)$row->jumlah);
 			array_push($year, $row->yyyy);
 		}
+		$q = $db->query("select year(created_at) as yyyy,
+       count(username) as jumlah
+from pegawai
+WHERE role = 'pegawai'
+group by year(created_at)
+order by yyyy");
+		
+		if(count($year) < 2){
+			$peningkatan = 0;
+		}else{
+			$l = count($year);
+			$peningkatan = $jumlah[$l - 1] - $jumlah[$l - 2];
+		}
+
 		$data['year'] = $jumlah;
 		$data['jumlah'] = $year;
+		$data['peningkatan'] = $peningkatan;
+		$data['jumlah_pegawai'] = count($year);
 		$data['name'] = $session->get('pegawai_name');
 		return view('admin/pages/dashboard', $data);
 	}

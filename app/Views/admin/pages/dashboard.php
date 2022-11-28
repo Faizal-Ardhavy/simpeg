@@ -51,7 +51,8 @@
     <div class="col-lg-5 mb-lg-0 mb-4">
         <div class="card z-index-2">
             <div class="card-body p-3">
-                <h6 class="ms-2 mt-4 mb-0">Peningkatan Jumlah Pegawai Per-tahun</h6>
+                <h6 class="ms-2 mt-4 mb-0">Peningkatan Jumlah Pegawai dari Tahun Sebelumnya</h6>
+                <h6 class="ms-2 mt-4 mb-0"><?= $peningkatan ?></h6>
                 <div class="container border-radius-lg">
                     <div class="row">
                         <div class="col-10 py-3 ps-0">
@@ -74,7 +75,7 @@
                                 </div>
                                 <p class="text-xs mt-1 mb-0 font-weight-bold">Jumlah Pegawai Keseluruhan</p>
                             </div>
-                            <p class="font-weight-bolder">455 orang</p>
+                            <p class="font-weight-bolder"><?= $jumlah_pegawai ?> orang</p>
                         </div>
                     </div>
                 </div>
