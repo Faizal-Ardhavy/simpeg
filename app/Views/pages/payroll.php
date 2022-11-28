@@ -18,7 +18,7 @@
 									<h6 class="text-center mb-0">Gaji</h6>
 									<span class="text-xs">per Oktober 2022</span>
 									<hr class="horizontal dark my-3">
-									<h5 class="mb-0">Rp <?= $data->gaji ?></h5>
+									<h5 class="mb-0">Rp <?= $dataAll[1]->gaji ?></h5>
 								</div>
 							</div>
 						</div>
@@ -42,11 +42,11 @@
 									<div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
 										<?=$img = null?>
 										<?php
-											if($data->bank=="Mandiri"){
+											if($dataAll[0]->bank=="Mandiri"){
 												$img = "../assets/img/logos/mandiri.png";
-											}else if($data->bank=="BNI"){
+											}else if($dataAll[0]->bank=="BNI"){
 												$img = "../assets/img/logos/bni.png";
-											}else if($data->bank=="BRI"){
+											}else if($dataAll[0]->bank=="BRI"){
 												$img = "../assets/img/logos/bri.jpg";
 											}else{
 												$img = "../assets/img/logos/bca.png";
@@ -54,7 +54,7 @@
 											
 										?>
 										<img class="w-10 me-3 mb-0" src=<?=$img?> alt="logo">
-										<h6 class="mb-0"><?= $data->rekening ?></h6>
+										<h6 class="mb-0"><?= $dataAll[0]->rekening ?></h6>
 
 										<div class="col-md-4 text-end">
 											<a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> <?php //Tombol modal 
@@ -158,11 +158,11 @@
 								<label for="card">Jenis Bank</label>
 							</div>
 							<div class="form-floating mb-3">
-								<input type="number" class="form-control ms-1" id="card" name="card" value=<?= $data->rekening ?>>
+								<input type="number" class="form-control ms-1" id="card" name="card" value=<?= $dataAll[0]->rekening ?>>
 								<label for="card">Nomor Kartu Kredit/Debit</label>
 							</div>
 							<div class="form-floating mb-3">
-								<input type="date" class="form-control ms-1" id="exp" name="exp" value=<?= $data->tgl_kadaluarsa?>>
+								<input type="date" class="form-control ms-1" id="exp" name="exp" value=<?= $dataAll[0]->tgl_kadaluarsa?>>
 								<label for="exp">Tanggal Kadaluarsa</label>
 							</div>
 							<div class="modal-footer">

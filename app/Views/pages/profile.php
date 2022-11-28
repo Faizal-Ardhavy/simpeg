@@ -93,12 +93,15 @@
                 </div>
                 <div class="modal-body">
                     <form action='updateProfile' method="POST">
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control ms-1" id="name" name="name">
-                          <label for="name">Nama</label>
+                        <div class="form-floating">
+                          <input type="hidden" class="form-control ms-1">
                         </div>
                         <div class="form-floating mb-3">
-                          <input type="date" class="form-control ms-1" id="date" name="date">
+                          <input type="text" class="form-control ms-1" id="name" name="name" value= "<?= $data->name; ?>">
+                          <label for="name">Nama Lengkap</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="date" class="form-control ms-1" id="date" name="date" value=<?= $data->tgl_lahir; ?>>
                           <label for="date">Tanggal Lahir</label>
                         </div>
                         <div class="form-floating mb-3">
@@ -109,15 +112,15 @@
                           <label for="gender">Jenis Kelamin</label>
                         </div>
                         <div class="form-floating mb-3">
-                          <textarea class="form-control ms-1" id="address" name="address"></textarea>
+                          <textarea class="form-control ms-1" id="address" name="address" ><?= $data->alamat; ?></textarea>
                           <label for="address">Alamat</label>
                         </div>
                         <div class="form-floating mb-3">
-                          <input type="email" class="form-control ms-1" id="email" name="email">
+                          <input type="email" class="form-control ms-1" id="email" name="email" value="<?= $data->email; ?>">
                           <label for="email">E-mail</label>
                         </div>
                         <div class="form-floating mb-3">
-                          <input type="text" class="form-control ms-1" id="phone" name="phone">
+                          <input type="text" class="form-control ms-1" id="phone" name="phone" value="<?= $data->no_telp; ?>">
                           <label for="phone">Nomor Telepon</label>
                         </div>
                         <div class="modal-footer">

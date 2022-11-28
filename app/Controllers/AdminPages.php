@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\JabatanModel;
 use CodeIgniter\Exceptions\AlertError;
 use App\Models\PegawaiModel;
 use App\Models\PresensiModel;
@@ -106,9 +107,15 @@ order by yyyy");
 			return redirect()->back();
 		}
 		$userModel = new PegawaiModel();
-		$data['name'] = $session->get('username');
-		$data['employee'] = $userModel->find();
-		return view('admin/pages/payroll', $data);
+		$jabat = new JabatanModel();
+		$dataAll['dataAll'] = [
+			$name = $session->get('username'),
+			$employee = $userModel->find(),
+			$jabatan = $jabat->find()
+
+        ];
+		// dd($dataAll);
+		return view('admin/pages/payroll', $dataAll);
 	}
 
 	public function updatePayroll()
@@ -174,49 +181,12 @@ order by yyyy");
 		$data['data'] = $id;
 		return view('admin/pages/editPayroll', $data);
 	}
-	public function laporan(){
+	public function report(){
 		$session  = session();
 		if ($session->role != 'admin') {
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
 		return view('admin/pages/laporan');
-	}
-
-	public function laporanPresensi(){
-		$session  = session();
-		if ($session->role != 'admin') {
-			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
-			return redirect()->back();
-		}
-
-		$userModel = new PegawaiModel();
-		$data['total'] = $userModel->countAllResults();
-
-		$userModel = new PresensiModel();
-		for ($i = 1; $i <= 12; $i++) {
-			$c = 0;
-			$temp = $userModel->where('YEAR(tanggal)', date('2022'))->where('MONTH(tanggal)', date($i))->findAll();
-			foreach ($temp as $t) {
-				if ($t->keterangan == 'hadir') {
-					$c++;
-				}
-			}
-			$presensi[$i] = $c;
-		}
-
-		$data['presensi'] = $presensi;
-
-		// dd($data);
-		return view('admin/pages/laporan/presensi', $data);
-	}
-
-	public function laporanGaji(){
-		$session  = session();
-		if ($session->role != 'admin') {
-			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
-			return redirect()->back();
-		}
-		return view('admin/pages/laporan/gaji');
 	}
 }

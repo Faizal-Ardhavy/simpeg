@@ -62,22 +62,22 @@
 									<tr>
 										<td scope="row" width="20%">Nama Lengkap</td>
 										<td width="1%">:</td>
-										<td><?= $profile->name; ?></td>
+										<td><?= $dataAll[0]->name ?></td>
 									</tr>
 									<tr>
 										<td scope="row" width="20%">Jabatan</td>
 										<td width="1%">:</td>
-										<td><?= $profile->jabatan; ?></td>
+										<td><?= $dataAll[1]->jabatan ?></td>
 									</tr>
 									<tr>
 										<td scope="row" width="20%">Gaji</td>
 										<td width="1%">:</td>
-										<td><?= $profile->gaji; ?></td>
+										<td><?= $dataAll[1]->gaji; ?></td>
 									</tr>
 									<tr>
 										<td scope="row" width="20%">Rekening</td>
 										<td width="1%">:</td>
-										<td><?= $profile->rekening; ?> (<?= $profile->bank; ?>)</td>
+										<td><?= $dataAll[0]->rekening; ?> (<?= $dataAll[0]->bank ?>)</td>
 									</tr>
 								</tbody>
 							</table>
@@ -91,9 +91,28 @@
 									<th scope="col">Jumlah Gaji</th>
 								</tr>
 								<tbody>
-									<tr>
+								<?php
+									$no = 0;
+									for ($i=1; $i<=12;$i++) {
+									?>
+										<?php 
+										if($dataAll[2][$i]>0){
+										?>
+											<tr>
+												<td scope="row"><?= ++$no . '. '; ?></td>
+												<td><?php
+													$m = DateTime::createFromFormat('!m', $i);
+													echo $m->format('F');
+													?></td>
+												<td class="text-capitalize"><?= $dataAll[1]->gaji ?></td>
+											</tr>
+										<?php }else{ ?>
+											<tr>
+											</tr>
 
-									</tr>
+										<?php } ?>
+
+									<?php } ?>
 								</tbody>
 							</table>
 						</div>

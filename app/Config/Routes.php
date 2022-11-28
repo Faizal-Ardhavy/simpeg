@@ -38,7 +38,7 @@ $routes->set404Override();
 
 /* Admin */
 $routes->get('adminDashboard', 'AdminPages::dashboard');
-$routes->get('adminLaporan', 'AdminPages::laporan');
+$routes->get('adminLaporan', 'AdminPages::report');
 $routes->get('adminLaporan/presensi', 'AdminPages::laporanPresensi');
 $routes->get('adminLaporan/gaji', 'AdminPages::laporanGaji');
 $routes->get('AdminEmployee', 'AdminPages::employee');
@@ -51,7 +51,7 @@ $routes->post('AdminEditPayroll/updatePayroll', 'AdminPages::updatePayroll');
 $routes->get('AdminPresensi', 'AdminPages::presensi');
 $routes->get('Presensi', 'Pages::presensi');
 $routes->get('/', 'Pages::dashboard');
-$routes->get('pegawaiDashboard', 'Pages::dashboard');
+$routes->get('Dashboard', 'Pages::dashboard');
 $routes->get('profile', 'Pages::profile');
 $routes->get('payroll', 'Pages::payroll');
 $routes->get('laporan', 'Pages::laporan');
