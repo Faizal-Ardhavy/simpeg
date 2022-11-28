@@ -16,8 +16,23 @@ class AdminPages extends BaseController
 		if ($session->role != 'admin') {
 			return redirect()->back();
 		}
-		$name['name'] = $session->get('pegawai_name');
-		return view('admin/pages/dashboard', $name);
+		$db = db_connect();
+		$q = $db->query("select year(created_at) as yyyy,
+       count(username) as jumlah
+from pegawai
+WHERE role = 'pegawai'
+group by year(created_at)
+order by yyyy");
+		$year = array();
+		$jumlah = array();
+		foreach ($q->getResult() as $row) {
+			array_push($jumlah, (int)$row->jumlah);
+			array_push($year, $row->yyyy);
+		}
+		$data['year'] = $jumlah;
+		$data['jumlah'] = $year;
+		$data['name'] = $session->get('pegawai_name');
+		return view('admin/pages/dashboard', $data);
 	}
 
 	public function employee()
