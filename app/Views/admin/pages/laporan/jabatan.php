@@ -62,7 +62,7 @@
 									<tr>
 										<td scope="row" width="1%">Jumlah Pegawai Aktif</td>
 										<td width="1%">:</td>
-										<td></td>
+										<td><?= array_sum($jumlah) ?></td>
 									</tr>
 								</tbody>
 							</table>
@@ -78,14 +78,14 @@
 								<tbody>
 									<?php
 									$no = 0;
-
+									for ($i = 0; $i < count($jabatan); $i++) {
 									?>
 										<tr>
 											<td scope="row"><?= ++$no . '. '; ?></td>
-											<td></td>
-											<td class="text-capitalize"></td>
+											<td class="text-uppercase"><?= $jabatan[$i] ?></td>
+											<td><?= $jumlah[$i] ?></td>
 										</tr>
-
+									<?php } ?>
 								</tbody>
 							</table>
 						</div>

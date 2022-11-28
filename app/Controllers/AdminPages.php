@@ -263,6 +263,6 @@ order by jab");
 		$data['jabatan'] = $jabatan;
 		$data['jumlah'] = $jumlah;
 
-		return view('admin/pages/laporan/gaji', $data);
+		return view('admin/pages/laporan/jabatan', $data);
 	}
 }
