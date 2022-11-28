@@ -29,12 +29,6 @@ order by yyyy");
 			array_push($jumlah, (int)$row->jumlah);
 			array_push($year, $row->yyyy);
 		}
-		$q = $db->query("select year(created_at) as yyyy,
-       count(username) as jumlah
-from pegawai
-WHERE role = 'pegawai'
-group by year(created_at)
-order by yyyy");
 		
 		if(count($year) < 2){
 			$peningkatan = 0;
@@ -254,6 +248,21 @@ order by yyyy");
 			echo "<script type='text/javascript'>alert('Anda bukan admin');</script>";
 			return redirect()->back();
 		}
-		return view('admin/pages/laporan/gaji');
+		$db = db_connect();
+		$q = $db->query("select jabatan as jab,
+       count(user) as jumlah
+from jabatan
+group by jabatan
+order by jab");
+		$jabatan = array();
+		$jumlah = array();
+		foreach ($q->getResult() as $row) {
+			array_push($jumlah, (int)$row->jumlah);
+			array_push($jabatan, $row->jab);
+		}
+		$data['jabatan'] = $jabatan;
+		$data['jumlah'] = $jumlah;
+
+		return view('admin/pages/laporan/gaji', $data);
 	}
 }
