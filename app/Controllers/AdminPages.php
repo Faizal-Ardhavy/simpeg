@@ -118,12 +118,7 @@ order by yyyy");
 		}
 		$userModel = new PegawaiModel();
 		$jabat = new JabatanModel();
-		$dataAll['dataAll'] = [
-			$name = $session->get('username'),
-			$employee = $userModel->find(),
-			$jabatan = $jabat->find()
-
-        ];
+		$dataAll['jabatan'] =$jabat->find();
 		// dd($dataAll);
 		return view('admin/pages/payroll', $dataAll);
 	}
@@ -202,6 +197,7 @@ order by yyyy");
 			'data' => $id,
 			'jabatan'=> $jab->where('user',$id)->get()->getRowArray(),
 		];
+		// dd($id);
 		return view('admin/pages/editPayroll', $data);
 	}
 	public function laporan(){

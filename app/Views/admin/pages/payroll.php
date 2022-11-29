@@ -24,16 +24,16 @@
 						</tr>
 						<?php $count = 0 ?>
 						<?php $no = 0?>
-						<?php foreach ($dataAll[1] as $dt) { ?>
+						<?php foreach ($jabatan as $jab) { ?>
 							
 						<tr>
 							<td><?= ++$count; ?></td>
-							<td><?= $dt->name; ?></td>
-							<td><?= $dataAll[2][$no]->jabatan ?></td>
-							<td><?= $dataAll[2][$no]->gaji ?></td>
+							<td><?= $jab->user; ?></td>
+							<td><?= $jab->jabatan ?></td>
+							<td><?= $jab->gaji ?></td>
 							<td>
 								<div class="row row-cols-auto">
-									<a class="" type="button" href="AdminEditPayroll/<?= $dt->username; ?>">
+									<a class="" type="button" href="AdminEditPayroll/<?= $jab->id; ?>">
 										<i class="bi bi-pencil"></i>
 									</a>
 								</div>
