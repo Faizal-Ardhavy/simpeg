@@ -28,27 +28,24 @@
 						</tr>
 						<?php $no = 0 ?>
 						<?php foreach ($employee as $dt) { ?>
-						<tr>
-							<td><?= ++$no; ?></td>
-							<td><?= $dt->name; ?></td>
-							<td><?= $dt->tgl_lahir; ?></td>
-							<td><?= $dt->kelamin; ?></td>
-							<td><?= $dt->alamat; ?></td>
-							<td><?= $dt->email; ?></td>
-							<td><?= $dt->no_telp; ?></td>
-							<td><?= $dt->role; ?></td>
-							<td>
-								<div class="row row-cols-auto">
-									<a class="" type="button" href="AdminEditEmployee/<?= $dt->username; ?>"
-										data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-										<i class="bi bi-pencil"></i>
-									</a>
-									<a class="" type="button" href="AdminDeleteEmployee/<?= $dt->username; ?>"
-										data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i
-											class="bi bi-trash2"></i></a>
-								</div>
-							</td>
-						</tr>
+							<tr>
+								<td><?= ++$no; ?></td>
+								<td><?= $dt->name; ?></td>
+								<td><?= $dt->tgl_lahir; ?></td>
+								<td><?= $dt->kelamin; ?></td>
+								<td><?= $dt->alamat; ?></td>
+								<td><?= $dt->email; ?></td>
+								<td><?= $dt->no_telp; ?></td>
+								<td><?= $dt->role; ?></td>
+								<td>
+									<div class="row row-cols-auto">
+										<a class="" type="button" href="AdminEditEmployee/<?= $dt->username; ?>" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+											<i class="bi bi-pencil"></i>
+										</a>
+										<a onclick="return confirm('Yakin ingin menghapus?');" class="" type="button" href="AdminDeleteEmployee/<?= $dt->username; ?>" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i class="bi bi-trash2"></i></a>
+									</div>
+								</td>
+							</tr>
 						<?php } ?>
 					</table>
 				</div>

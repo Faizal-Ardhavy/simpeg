@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PegawaiModel;
+use App\Models\JabatanModel;
 
 class Register extends BaseController
 {
@@ -55,6 +56,14 @@ class Register extends BaseController
             'name' => $this->request->getVar('name'),
             'role' => "pegawai"
         ]);
+
+        $jabatan = new JabatanModel();
+        $jabatan->insert([
+            'user' => $this->request->getVar('username'),
+            'jabatan' => " ",
+            'gaji' => 0,
+        ]);
+        
         return redirect()->to(base_url().'/login');
     }
 }
