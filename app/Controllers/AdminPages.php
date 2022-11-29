@@ -140,14 +140,13 @@ order by yyyy");
 		$gaji    = $this->request->getPost('gaji');
 
 		$data = [
-			'username' => $id,
 			'jabatan' => $jabatan,
 			'gaji' => $gaji,
 		];
 
-		$userModel = new PegawaiModel();
+		$jabatan = new JabatanModel();
 
-		$result =  $userModel->update($id, $data);
+		$result =  $jabatan->update($id, $data);
 
 		if ($result) {
 			return redirect()->to('AdminPayroll');

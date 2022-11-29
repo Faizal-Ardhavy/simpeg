@@ -57,12 +57,12 @@ class Register extends BaseController
             'role' => "pegawai"
         ]);
 
-        // $jabatan = new JabatanModel();
-        // $jabatan->insert([
-        //     'user' => $this->request->getVar('username'),
-        //     'jabatan' => " ",
-        //     'gaji' => 0,
-        // ]);
+        $jabatan = new JabatanModel();
+        $jabatan->insert([
+            'user' => $this->request->getVar('username'),
+            'jabatan' => " ",
+            'gaji' => 0,
+        ]);
         
         return redirect()->to(base_url().'/login');
     }
