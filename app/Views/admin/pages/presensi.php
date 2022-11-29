@@ -14,19 +14,19 @@
 				</div>
 				<div class="card-body">
 					<hr class="horizontal gray-light" style="margin: 0 !important;">
-					<table class="table text-dark ps-0 text-sm">
+					<table class="table table-responsive text-dark ps-0 text-sm">
 						<tr>
-							<th style="width: 10% !important;">ID</th>
-							<th style="width: 10% !important;">Nama</th>
-							<th style="width: 25% !important;">Tanggal</th>
-							<th style="width: 25% !important;">Keterangan</th>
+							<th width="10%">ID</th>
+							<th width="10%">Nama</th>
+							<th width="25%">Tanggal</th>
+							<th width="25%">Keterangan</th>
 						</tr>
 						<?php foreach ($data as $dt) { ?>
 						<tr>
-							<td style="width: 10% !important;"><?= $dt->id; ?></td>
-							<td style="width: 10% !important;"><?= $dt->user_presensi; ?></td>
-							<td style="width: 25% !important;"><?= $dt->tanggal; ?></td>
-							<td style="width: 25% !important;"><?= $dt->keterangan; ?></td>
+							<td width="10%"><?= $dt->id; ?></td>
+							<td width="10%"><?= $dt->user_presensi; ?></td>
+							<td width="25%"><?= $dt->tanggal; ?></td>
+							<td width="25%"><?= $dt->keterangan; ?></td>
 						</tr>
 						<?php } ?>
 					</table>

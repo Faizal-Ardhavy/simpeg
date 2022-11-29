@@ -14,30 +14,30 @@
 				</div>
 				<div class="card-body">
 					<hr class="horizontal gray-light" style="margin: 0 !important;">
-					<table class="table text-dark ps-0 text-sm">
+					<table class="table table-responsive text-dark ps-0 text-sm">
 						<tr>
-							<th style="">No</th>
-							<th style="">Nama</th>
-							<th style="">Tanggal Lahir</th>
-							<th style="">Jenis Kelamin</th>
-							<th style="">Alamat</th>
-							<th style="">Email</th>
-							<th style="">No. Telepon</th>
-							<th style="">Role</th>
-							<th style=""></th>
+							<th width="1%">No</th>
+							<th>Nama</th>
+							<th>Tanggal Lahir</th>
+							<th>Jenis Kelamin</th>
+							<th>Alamat</th>
+							<th>Email</th>
+							<th>No. Telepon</th>
+							<th>Role</th>
+							<th></th>
 						</tr>
-						<?php $count = 0 ?>
+						<?php $no = 0 ?>
 						<?php foreach ($employee as $dt) { ?>
 						<tr>
-							<td style=""><?= ++$count; ?></td>
-							<td style=""><?= $dt->name; ?></td>
-							<td style=""><?= $dt->tgl_lahir; ?></td>
-							<td style=""><?= $dt->kelamin; ?></td>
-							<td style=""><?= $dt->alamat; ?></td>
-							<td style=""><?= $dt->email; ?></td>
-							<td style=""><?= $dt->no_telp; ?></td>
-							<td style=""><?= $dt->role; ?></td>
-							<td style="">
+							<td><?= ++$no; ?></td>
+							<td><?= $dt->name; ?></td>
+							<td><?= $dt->tgl_lahir; ?></td>
+							<td><?= $dt->kelamin; ?></td>
+							<td><?= $dt->alamat; ?></td>
+							<td><?= $dt->email; ?></td>
+							<td><?= $dt->no_telp; ?></td>
+							<td><?= $dt->role; ?></td>
+							<td>
 								<div class="row row-cols-auto">
 									<a class="" type="button" href="AdminEditEmployee/<?= $dt->username; ?>"
 										data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">

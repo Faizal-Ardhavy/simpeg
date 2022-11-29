@@ -14,7 +14,7 @@
 				</div>
 				<div class="card-body">
 					<hr class="horizontal gray-light" style="margin: 0 !important;">
-					<table class="table text-dark ps-0 text-sm">
+					<table class="table table-responsive text-dark ps-0 text-sm">
 						<tr>
 							<th>No</th>
 							<th>Nama</th>
